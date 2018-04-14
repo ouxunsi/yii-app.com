@@ -13,7 +13,7 @@ $this->title = Yii::t('backend', 'System Information');
 
 $this->registerJs("window.paceOptions = { ajax: false }", \yii\web\View::POS_HEAD);
 $this->registerJsFile(
-    Yii::$app->request->baseUrl . 'js/system-information/index.js',
+    Yii::$app->request->baseUrl . '/js/system-information/index.js',
     ['depends' => ['\yii\web\JqueryAsset', '\common\assets\Flot', '\yii\bootstrap\BootstrapPluginAsset']]
 );
 

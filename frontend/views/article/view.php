@@ -9,16 +9,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <article class="article-item">
         <h1><?php echo $model->title ?></h1>
 
-        <?php if ($model->thumbnail_path): ?>
-            <?php echo \yii\helpers\Html::img(
+        <?php
+        if ($model->thumbnail_path) {
+            echo \yii\helpers\Html::img(
                 Yii::$app->glide->createSignedUrl([
                     'glide/index',
                     'path' => $model->thumbnail_path,
                     'w' => 200
                 ], true),
                 ['class' => 'article-thumb img-rounded pull-left']
-            ) ?>
-        <?php endif; ?>
+            );
+        }
+        ?>
+
 
         <?php echo $model->body ?>
 

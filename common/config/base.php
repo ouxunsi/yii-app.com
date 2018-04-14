@@ -4,7 +4,7 @@ $config = [
     'vendorPath' => __DIR__ . '/../../vendor',
     'extensions' => require(__DIR__ . '/../../vendor/yiisoft/extensions.php'),
     'sourceLanguage' => 'en-US',
-    'language' => 'en-US',
+    'language' => 'zh-CN',
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -89,7 +89,7 @@ $config = [
                     'class' => yii\i18n\PhpMessageSource::class,
                     'basePath' => '@common/messages',
                 ],
-                '*' => [
+                /*'*' => [
                     'class' => yii\i18n\PhpMessageSource::class,
                     'basePath' => '@common/messages',
                     'fileMap' => [
@@ -98,8 +98,7 @@ $config = [
                         'frontend' => 'frontend.php',
                     ],
                     'on missingTranslation' => [backend\modules\translation\Module::class, 'missingTranslation']
-                ],
-                /* Uncomment this code to use DbMessageSource
+                ],*/
                  '*'=> [
                     'class' => 'yii\i18n\DbMessageSource',
                     'sourceMessageTable'=>'{{%i18n_source_message}}',
@@ -108,7 +107,6 @@ $config = [
                     'cachingDuration' => 3600,
                     'on missingTranslation' => ['\backend\modules\translation\Module', 'missingTranslation']
                 ],
-                */
             ],
         ],
 
