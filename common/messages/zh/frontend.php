@@ -18,7 +18,7 @@
  */
 return [
     'Activation email' => '',
-    'This email has already been taken.' => '',
+    'This email has already been taken.' => '该邮箱已经被占用。',
     'Your account has been successfully activated.' => '',
     'Your account has been successfully created. Check your email for further instructions.' => '',
     'Your activation link: {url}' => '',
@@ -30,7 +30,7 @@ return [
     'Body' => '内容',
     'Check your email for further instructions.' => '请检查您的邮件',
     'Confirm Password' => '密码确认',
-    'Contact' => '联系',
+    'Contact' => '咨询与帮助',
     'E-mail' => 'Email',
     'Email' => 'Email',
     'Error while oauth process.' => 'oauth进程错误',
@@ -59,6 +59,7 @@ return [
     'Sorry, we are unable to reset password for email provided.' => '根据您提供的email无法充值密码',
     'Subject' => '主题',
     'Submit' => '提交',
+    'Reset' => '重置',
     'Thank you for contacting us. We will respond to you as soon as possible.' => '感谢你您联系我们，我们会尽快回复',
     'There was an error sending email.' => '发送邮件时发生错误',
     'This email address has already been taken.' => '此邮件已被占用',

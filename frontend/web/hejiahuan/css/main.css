@@ -1,0 +1,213 @@
+html{height:100%;overflow: hidden;}
+body,html{min-height: 100%;width: 100vw;overflow-x: hidden;overflow-y: auto;max-width: 1920px;margin: 0 auto;}
+body{width: 100%;margin: 0; padding: 0;font-family: "微软雅黑";}
+ul,li{list-style: none;margin: 0;padding: 0;}
+.bv{backface-visibility: hidden; -webkit-backface-visibility: hidden; -ms-backface-visibility:hidden; -moz-backface-visibility: hidden;}
+.full{position: absolute;width: 100%;height: 100%;top: 0;}
+.threeD{-webkit-perspective: 500;-webkit-perspective-origin: 50% 50%;-webkit-transform-style: preserve-3d;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.sup{position: relative;top: -0.2em;}
+.sup2{position: relative;top: -0.2em;}
+#sdw-wrap{visibility: hidden;width: 100%;margin-top:60px;overflow: hidden;min-height: 100%;}
+.sdw-container .pa{position: absolute;}
+.container{width: 62.5%;min-width: 768px;margin: 0 auto;}
+.sdw-container img{ width: 100%; display: block;}
+.sdw-container{position: relative;width: 100%;color: #fff;}
+.sdw-container .btn-sd{width:2.23em;position: absolute;bottom: 0;z-index: 1000;left: 50%;margin-left: -1.116em;margin-bottom: -1.116em;cursor:pointer;}
+.sdw-container .btn-sd2{display: none;}
+.sdw-container .bg{position: absolute;left:0;top:0;width: 100%;height: 100%;}
+.sdw-container .box{-webkit-transition: all 2s;-moz-transition: all 2s;-o-transition: all 2s;-ms-transition:  all 2s;transition:  all 2s;}
+.sdw-container .box2{-webkit-transition: all .3s ease-out 0s;-moz-transition: all .3s ease-out 0s;-o-transition: all .3s ease-out 0s;-ms-transition: all .3s ease-out 0s;transition: all .3s ease-out 0s;}
+.sdw-container .horz{display: inline-block;vertical-align: middle;position: relative;}
+.sdw-container .content{width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+.sdw-container i{height: 100%;}
+.sdw-container .title{font-size: 47.5px;margin-bottom:65px;color: #000;}
+.sdw-container .ctx{font-size: 22.5px;margin-bottom: 60px;color: #2d2a2a;}
+.sdw-container .ctx2{font-size: 22.5px;margin-bottom: 60px;color: #2d2a2a;}
+.sdw-container .ctx3{font-size: 22.5px;margin-bottom: 60px;color: #2d2a2a;}
+
+.shadow{text-shadow: 1px 1px #000;}
+
+
+
+@media (max-width: 1200px) {
+    .sdw-container .title{font-size: 42.75px;margin-bottom:58.5px; }
+    .sdw-container .ctx{font-size: 20.25px;margin-bottom: 54px;}
+    
+}
+
+
+
+
+.sdw-container  .icons,.sdw-container  .title,.sdw-container  .ctx{ position:relative;transition-property:transform,top,left; -webkit-transition-property: transform,top,left; -moz-transition-property: transform,top,left; -ms-transition-property: transform,top,left; -o-transition-property: transform ,top,left;}
+.sdw-container  .icons img{transition-property:opacity; -webkit-transition-property: opacity; -moz-transition-property: opacity; -ms-transition-property: opacity; -o-transition-property: opacity;}
+.sdw-container .disn{ display:none;}
+.sdw-container .c-red{ color:#d11515;} /*红色*/
+.ie8 #cbg-main-nav li > a{ padding:0 13px;}
+.sdw.cbg .product-nav{display: block} 
+.pa{position: absolute;}
+
+@media screen and (min-width: 769px){
+    #sdw-wrap .sdw-mobile{display: none;}
+}
+@media (max-width: 768px) {
+    #sdw-wrap .sdw-pc{display: none;}
+}
+
+
+.sdw .product-nav .logo-icon {
+    width: 240px;
+    height: 48px;
+    margin-right: 15px;
+    text-indent: -9999px;
+    background: url(/content/dam/huawei-cbg-site/greate-china/cn/mkt/pdp/tablets/matebook-x/matebook-x-title.jpg) no-repeat;
+}
+.sdw-animate{position: relative;
+
+             /*transition-timing-function: cubic-bezier( 0.6, 0.2, 0.1, 1 );-webkit-transition-timing-function: cubic-bezier( 0.6, 0.2, 0.1, 1 );-moz-transition-timing-function: cubic-bezier( 0.6, 0.2, 0.1, 1 );-o-transition-timing-function: cubic-bezier( 0.6, 0.2, 0.1, 1 );-ms-transition-timing-function: cubic-bezier( 0.6, 0.2, 0.1, 1 );*/
+             transition-timing-function: ease-in;-webkit-transition-timing-function: ease-in;-moz-transition-timing-function: ease-in;-o-transition-timing-function: ease-in;-ms-transition-timing-function: ease-in;
+
+             backface-visibility: hidden; -webkit-backface-visibility: hidden; -ms-backface-visibility:hidden; -moz-backface-visibility: hidden;}
+
+.btn_sdw{display: none;}
+
+.sdw-container1{position: relative;}
+.sdw-container1 .sdw1_text{width: 100%;top: 9%;left: 0%;}
+.sdw-container1 .sdw1_text .sdw1_text2{right: 0;top: 0;}
+.sdw-container1 .sdw1_iphone{width: 23.96%;position: absolute;bottom: 9%;right: 0;}
+
+
+.sdw-container2{position: relative;}
+.sdw-container2 .sdw1_text{width: 100%;top: 10.8%;left: 0%;}
+.sdw-container2 .sdw1_text .sdw1_text2{right: 0;top: 0;}
+.sdw-container2 .container{padding-top: 10%;width: 100%;}
+.sdw-container2 .container .row{left: 8%;}
+.sdw-container2 .col-5{width: 24%;}
+.sdw-container2 .iphone_w{width: 62.5%;min-width: 768px;}
+.sdw-container2 .icons{width: 24.58%;min-width: 168px;}
+.sdw-container2 .icons .icon{left: 0;top: 0;}
+
+.sdw-container3{position: relative;background: #fff; text-align: center;}
+.sdw-container3 .sdw1_text{width: 100%;top: 8.9%;left: 0%;}
+.sdw-container3 .sdw1_text .sdw1_text2{right: 0;top: 0;}
+.sdw-container3 .container{padding-top: 4%;}
+.sdw-container3 .col-5{width: 100%;}
+.sdw-container3 .icons{width: 47.75%;margin: 0 auto 5%;min-width: 458.4px;}
+.sdw-container3 .icons .icon{left: 0;top: 0;}
+.sdw-container3 .sdw3_iphone{width: 100%;bottom: 0;left: 0;}
+.sdw-container3 .sdw3_iphone .sdw3_iphone2{bottom: 0;left: 0;}
+.sdw-container3 .ps{right: 3%;bottom: 3%;color: #000;}
+
+.sdw-container4{position: relative;}
+.sdw-container4 .sdw1_text{width: 100%;top: 8.9%;left: 0%;}
+.sdw-container4 .sdw1_text .sdw1_text2{right: 0;top: 0;}
+.sdw-container4 .container{padding-top: 7%;width: 100%;}
+.sdw-container4 .container .row{left: 8%;}
+.sdw-container4 .col-5{width: 26.3%;min-width: 404px;}
+.sdw-container4 .iphone_w{width: 62.5%;min-width: 768px;}
+.sdw-container4 .icons{width: 42.08%;min-width: 404px;}
+.sdw-container4 .icons .icon{left: 0;top: 0;}
+.sdw-container4 .sdw4_book{width: 62.03%;right: 0;top: 15%;}
+.sdw-container4 .ps{right: 3%;bottom: 3%;color: #000;}
+
+.sdw-container5{position: relative;}
+.sdw-container5 .sdw1_text{width: 100%;top: 10.8%;left: 0%;}
+.sdw-container5 .sdw1_text .sdw1_text2{right: 0;top: 0;}
+.sdw-container5 .container{padding-top: 13%;}
+
+.sdw-container5 .col-5{width: 47%;}
+.sdw-container5 .col-5 .ctx{width: 94%;}
+.sdw-container5 .icons{width: 21.33%;min-width: 204.8px;}
+.sdw-container5 .icons .icon{left: 0;top: 0;}
+
+
+
+
+  
+  
+
+
+.rotate-box{position: absolute;bottom: 0;left: 0;width: 100%;}
+.rotate-box .pic{position: relative;}
+.rotate-box ol{position: absolute;top:0;left: 0;width: 100%;}
+.rotate-box img{position: absolute;left:0;width: 100%;height:auto;}
+.current-image{visibility:visible;width:100%;    transform: matrix(1, 0, 0, 1, 0, 0) translateZ(0px);}
+.previous-image{visibility:hidden;width:0;    transform: matrix(1, 0, 0, 1, 0, 0) translateZ(0px);}
+.rotate-loading{width:100%; position: absolute;bottom: 0;left: 0;z-index: 1001;}
+.rotate-loading .loading{width:2em;position: absolute;left: 50%;margin-left: -5%;top: 95%; margin-top: -19%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .sdw-container{color: #000;}
+    .container{min-width: initial;}
+    
+    .sdw-container1 .sdw1_text{width: 100%;position: absolute;top: 7.5%;left: 0;}
+    
+    .sdw-container2{position: relative;min-height: 33.33em;z-index: 10;color: #000;}
+    .sdw-container2 .bg img{width: auto;height: 100%;}
+    .sdw-container2 .container{text-align: center;padding-top: 10%;width: 100%;}
+    .sdw-container2 .container .row{left: 0%;}
+    .sdw-container2 .col-5{width: 95%;margin: 0 auto;}
+    .sdw-container2 .icons{width: 38.13%;margin: 0 auto;min-width: initial;}
+    .sdw-container2 .iphone_w{width: 100%;min-width: initial;}
+
+    .sdw-container3{position: relative;}
+    .sdw-container3 .bg img{width: auto;height: 100%;}
+    .sdw-container3 .container{padding-top: 10%;text-align: center;width: 100%;}
+    .sdw-container3 .row{left: 0%;}
+    .sdw-container3 .col-5{width: 100%;}
+    .sdw-container3 .icons{width: 57.2%;min-width: initial;margin: 0 auto 18%;}
+    .sdw-container3 .icons .icon{left: 0;top: 0;}
+    .sdw-container3 .sdw3_iphone{position: relative;}
+    .sdw-container3 .sdw3_iphone2{top: 0;left: 0;}
+    .sdw-container3 .ps_m{text-align: left;right: 3%;bottom: 3%;}
+    
+    .sdw-container4{position: relative; min-height: 33.333em;}
+    .sdw-container4 .bg img{width: auto;height: 100%;}
+    .sdw-container4 .sdw1_text{width: 100%;top: 6%;left: 0%;}
+    .sdw-container4 .sdw1_text .sdw1_text2{right: 0;top: 0;}
+    .sdw-container4 .container{padding-top: 10%;text-align: center;}
+    .sdw-container4 .container .row{left: 0%;}
+    .sdw-container4 .col-5{width: 100%;}
+    .sdw-container4 .icons{width: 72.8%;margin: 0 auto;min-width: initial;}
+    .sdw-container4 .icons .icon{left: 0;top: 0;}
+    .sdw-container4 .sdw4_book{width: 100%;bottom: 0;left: 0;top: auto;}
+    .sdw-container4 .ps{right: 3%;bottom: 2%;}
+    .sdw-container4 .iphone_w{width: 100%;min-width: initial;}
+    
+    .sdw-container5{position: relative;background: #fff; text-align: center;}
+    .sdw-container5 .bg img{height: 100%;}
+    .sdw-container5 .container{padding-top: 9%;width: 100%;}
+    .sdw-container5 .row{left: 0;}
+    .sdw-container5 .col-5{width: 100%;}
+    .sdw-container5 .icons{width: 41.73%;min-width: initial;margin: 0 auto 5%;}
+    .sdw-container5 .icons .icon{left: 0;top: 0;}
+    .sdw-container5 .sdw5_iphone{width: 100%;bottom: 0;left: 0;}
+    .sdw-container5 .ps_m{right: 1%;bottom: 3%;color: #000;text-align: left;}
+    
+    
+}
+@media (max-width: 600px) {
+    .sup{position: relative;top: -0.3em;}
+    .sup2{position: relative;top: -0.3em;}
+}
+/*@media (max-width: 500px) {
+    .sup{position: relative;top: -0.4em;}
+    .sup2{position: relative;top: -0.1em;}
+}*/
+body.cbg{overflow-x: hidden;}
+body.cbg,.cbg #cbg-main-nav-wrapper,#cbg-main-nav,#cbg-main-nav > .cbg-overlay,#cbg-main-nav > .cbg-wrapper{min-width:initial}
+

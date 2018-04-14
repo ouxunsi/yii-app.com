@@ -89,7 +89,7 @@ $config = [
                     'class' => yii\i18n\PhpMessageSource::class,
                     'basePath' => '@common/messages',
                 ],
-                /*'*' => [
+                '*' => [
                     'class' => yii\i18n\PhpMessageSource::class,
                     'basePath' => '@common/messages',
                     'fileMap' => [
@@ -98,7 +98,8 @@ $config = [
                         'frontend' => 'frontend.php',
                     ],
                     'on missingTranslation' => [backend\modules\translation\Module::class, 'missingTranslation']
-                ],*/
+                ],
+                /*
                  '*'=> [
                     'class' => 'yii\i18n\DbMessageSource',
                     'sourceMessageTable'=>'{{%i18n_source_message}}',
@@ -107,6 +108,7 @@ $config = [
                     'cachingDuration' => 3600,
                     'on missingTranslation' => ['\backend\modules\translation\Module', 'missingTranslation']
                 ],
+                */
             ],
         ],
 

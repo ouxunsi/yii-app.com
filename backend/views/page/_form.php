@@ -24,6 +24,9 @@ use yii\helpers\Html;
     [
         'plugins' => ['fullscreen', 'fontcolor', 'video'],
         'options' => [
+            'lang' => 'zh_cn',
+            'replaceDivs' => false,
+            'deniedTags' => false,
             'minHeight' => 400,
             'maxHeight' => 400,
             'buttonSource' => true,
