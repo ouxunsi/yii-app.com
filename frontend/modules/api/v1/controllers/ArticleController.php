@@ -3,9 +3,11 @@
 namespace frontend\modules\api\v1\controllers;
 
 use frontend\modules\api\v1\resources\Article;
+use frontend\modules\api\v1\resources\ArticleCategory;
 use yii\data\ActiveDataProvider;
 use yii\rest\ActiveController;
 use yii\web\HttpException;
+use yii\web\Response;
 
 /**
  * Class ArticleController
@@ -72,5 +74,74 @@ class ArticleController extends ActiveController
             throw new HttpException(404);
         }
         return $model;
+    }
+
+    public function actionGetNews(){
+
+        \Yii::$app->response->format = Response::FORMAT_JSON;
+        try {
+            $params = \Yii::$app->request->post();
+            $limit = $params['limit'] ?? 3;
+            $offset = $params['offset'] ?? 0;
+            $this->layout = '_clean';
+            $models = Article::find()->published()->limit($limit)->offset($offset)
+                ->andFilterWhere(['category_id'=>$params['category_id']])->orderBy(['created_at'=>SORT_DESC])->all();
+            if($models) {
+                $data = [
+                    'code' => 1,
+                    'data' => $this->render('news-list', ['models' => $models])
+                ];
+            }else{
+                $data = [
+                    'code' => 404,
+                    'data' => ''
+                ];
+            }
+        }catch(\Exception $exception){
+            $data = [
+                'code' => $exception->getCode(),
+                'msg' => $exception->getMessage(),
+            ];
+        }
+        return $data;
+    }
+
+    public function actionGetJobs(){
+        \Yii::$app->response->format = Response::FORMAT_JSON;
+        try {
+            $params = \Yii::$app->request->post();
+            $limit = $params['limit'] ?? 3;
+            $offset = $params['offset'] ?? 0;
+            $this->layout = '_clean';
+            if(empty($params['category_id'])){
+                $categories = ArticleCategory::find()->where(['parent_id'=>2])->indexBy('id')->asArray()->all();
+                if(empty($categories)){
+                    $models = [];
+                }else{
+                    $models = Article::find()->published()->limit($limit)->offset($offset)
+                        ->andFilterWhere(['category_id' => array_keys($categories)])->orderBy(['created_at' => SORT_DESC])->all();
+                }
+            }else {
+                $models = Article::find()->published()->limit($limit)->offset($offset)
+                    ->andFilterWhere(['category_id' => $params['category_id']])->orderBy(['created_at' => SORT_DESC])->all();
+            }
+            if($models) {
+                $data = [
+                    'code' => 1,
+                    'data' => $this->render('jobs-list', ['models' => $models])
+                ];
+            }else{
+                $data = [
+                    'code' => 404,
+                    'data' => ''
+                ];
+            }
+        }catch(\Exception $exception){
+            $data = [
+                'code' => $exception->getCode(),
+                'msg' => $exception->getMessage(),
+            ];
+        }
+        return $data;
     }
 }

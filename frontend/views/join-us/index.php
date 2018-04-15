@@ -1,18 +1,19 @@
 <?php
-/* @var $this \yii\web\View */
-/* @var $content string */
+/* @var $this yii\web\View */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var $searchModel frontend\models\search\ArticleSearch */
+/* @var $category \common\models\ArticleCategory*/
 \frontend\assets\HejiahuanFrontendAsset::register($this);
-$this->beginContent('@frontend/views/layouts/_clear.php');
+$this->title = Yii::t('frontend', 'Join us');
 ?>
-    <div class="backtop"><img src="/images/backtop.png"/></div>
     <div class="bodypage">
-        <header>
+        <header style="position:fixed">
             <div id="hw1_global_nav">
                 <nav>
                     <div class="container">
                         <div class="hjh-pc">
                             <div class="headtop">
-                                <div class="logo"><a href="/"><img src="/images/logo.jpg"></a></div>
+                                <div class="logo"><a href="index.html"><img src="/images/logo.jpg"></a></div>
                                 <div class="topnav">
                                     <ul>
                                         <li id="home"><a href="/#home">首页</a></li>
@@ -39,9 +40,23 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                                     </ul>
                                 </div>
                             </div>
+                            <div class="aboutmenu">
+                                <div class="aboutmenutit">
+                                    <span>菜单</span><span class="upicon"><img src="/images/down.png"/></span>
+                                </div>
+                                <ul style="display: none;">
+                                    <li><a href="/page/about-company">公司介绍</a></li>
+                                    <li><a href="/page/about-youguan">恒信东方儿童优馆</a></li>
+                                    <li><a href="/page/about-youpin">恒信东方儿童优品</a></li>
+                                    <li><a href="/page/about-vr">超星时空首映礼</a></li>
+                                    <li><a href="/join-us">加入我们</a></li>
+                                    <li><a href="/page/about-law">法律顾问</a></li>
+                                    <li><a href="/page/about-contact">联系我们</a></li>
+                                </ul>
+
+
+                            </div>
                         </div>
-
-
                     </div>
                 </nav>
             </div>
@@ -50,13 +65,12 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                 <div class="mob_nav_open  visible-xs visible-sm">
                     <ul>
                         <li>
-                            <a href="/" class="navbar-toggle primary-nav-consumer-mob"
-                               data-target="#primary-nav-consumer-mob" aria-expanded="false"
+                            <a href="/" class="navbar-toggle primary-nav-consumer-mob" aria-expanded="false"
                                aria-controls="primary-nav-consumer-mob">首页</a>
 
                         </li>
                         <li>
-                            <a href="/page/product-detail" class="navbar-toggle primary-nav-enterprise-mob"
+                            <a href="chanpinshow.html" class="navbar-toggle primary-nav-enterprise-mob"
                                data-target="#primary-nav-enterprise-mob" aria-expanded="false"
                                aria-controls="primary-nav-enterprise-mob">产品介绍 </a>
 
@@ -92,16 +106,54 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
 
             </div>
         </header>
-        <?= $content?>
+        <div class="margintop"></div>
+        <div class="pagemain1">
+            <div class="aboutmod1">
+                <div class="aboutnav">
+                    <ul id="about-menu">
+                        <li id="about-company"><a href="/page/about-company">公司介绍</a></li>
+                        <li id="about-youguan"><a href="/page/about-youguan">恒信东方儿童优馆</a></li>
+                        <li id="about-youpin"><a href="/page/about-youpin">恒信东方儿童优品</a></li>
+                        <li id="about-vr"><a href="/page/about-vr">超星时空首映礼</a></li>
+                        <li class="aboutnavlicur"><a href="/join-us">加入我们</a></li>
+                        <li id="about-law"><a href="/page/about-law">法律顾问</a></li>
+                        <li id="about-contact"><a style="border-bottom:none;" href="about-contact">联系我们</a></li>
+                    </ul>
+                </div>
+
+                <div class="aboutright">
+                    <div class="abouttit1">加入我们</div>
+                    <div class="aboutcon-join">
+                        <div class="joinmod1">
+                            <div class="jobtype">
+                                <ul>
+                                    <li <?= $category_id ? '' : 'class="jobtypelicur"'?>><a href="<?= \yii\helpers\Url::toRoute(['join-us/index'])?>">全部</a></li>
+                                    <?php foreach ($categories as $category):?>
+                                    <li <?= $category->id == $category_id ? 'class="jobtypelicur"' : ''?>><a data-id="<?=$category->id?>" href="<?= \yii\helpers\Url::toRoute(['join-us/index','category_id'=>$category->id])?>"><?= $category->title?></a></li>
+                                    <?php endforeach;?>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lanren">
+                            <div class="hidden"></div>
+                            <ul class="list"></ul>
+                            <div class="moremod" style="margin-top:10px;"><div class="more" id="load_more"><a href="javascript:;" >加载更多</a></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
         <div class="hjh-pc">
             <div class="copyrightmod">
                 <div class="copyrightmod1">
                     <div class="pagemain">
                         <div class="copyrightmod2">
-                            <div class="logo1"><a target="_blank" href="http://www.hxgro.com"><img
-                                            src="/images/logo1.jpg"/></a></div>
+                            <div class="logo1"><a target="_blank" href="http://www.hxgro.com"><img src="/images/logo1.jpg"/></a>
+                            </div>
                             <div class="copyrightmod2tit">
-                                <div class="copyrightmod2tit1"><a href="<?= \yii\helpers\Url::toRoute(['page/view','slug'=>'about'])?>">公司介绍</a></div>
+                                <div class="copyrightmod2tit1"><a href="/page/about-company">公司介绍</a></div>
                                 <div class="copyrightmod2tit2">|</div>
                                 <div class="copyrightmod2tit1"><a href="/page/about-youguan">恒信东方儿童优馆</a></div>
                                 <div class="copyrightmod2tit2">|</div>
@@ -136,7 +188,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                                     src="/images/logo1min.png"/></a></div>
                     <div class="copyrightmod2-1">
                         <div class="copyrightmod2tit">
-                            <div class="copyrightmod2tit1"><a href="/page/about-comany">公司介绍</a></div>
+                            <div class="copyrightmod2tit1"><a href="/page/about-company">公司介绍</a></div>
                             <div class="copyrightmod2tit1"><a href="/page/about-youguan">恒信东方儿童优馆</a></div>
                             <div class="copyrightmod2tit1"><a href="/page/about-youpin">恒信东方儿童优品</a></div>
                         </div>
@@ -163,32 +215,48 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
 
             </div>
         </div>
-        <div class="boxshade">
-            <div class="videomod1">
-                <div class="videomod3">
-                    <div class="videomod4">
-                        <div class="videoclosebtn" onclick="closevideoplay();">×</div>
-                        <video id="media" width="100%" height="100%" controls="controls">
-
-                            <source src="/video/aboutproduct.mp4" type="video/mp4">
-
-                        </video>
-
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+<script>
+    <?php $this->beginBlock('LOAD')?>
+    var category_id = '<?=$category_id?>';
+    var lanren = {
+        _default: 3, //默认显示图片个数
+        _loading: 3,  //每次点击按钮后加载的个数
+        _page_now: 1,
+        init:function () {
+            this.loadMore();
+        },
+        loadMore: function () {
+            var that = this;
+            var limit = this._loading;
+            var offset = (this._page_now - 2) * this._loading + this._default;
+            if(this._page_now == 1){
+                limit = this._default;
+                offset = 0;
+            }
+            $.ajax('/api/v1/article/get-jobs',{
+                method:'post',
+                data:{offset:offset,limit:limit,category_id:category_id},
+                dataType:'json',
+                success:function (data) {
+                    if(data.code == 1){
+                        $(".lanren ul.list").append(data.data);
+                        that._page_now ++;
+                    }else{
+                        $('.lanren .more').html("<p>全部加载完毕</p>");
+                    }
+                },
+                error:function (data) {
+                    $('.lanren .more').html("<p>全部加载完毕</p>");
+                }
 
-    <script>
-        <?php $this->beginBlock('SWITCH_NAV')?>
-        var url = location.href;
-        var arr=url.split("#");
-        if(arr[1]){
-            $("#hw1_global_nav .topnav li").removeClass('topnavlicur');
-            $("#"+arr[1]).addClass('topnavlicur');
+            });
         }
-        <?php $this->endBlock()?>
-    </script>
-<?php $this->registerJs($this->blocks['SWITCH_NAV'],\yii\web\View::POS_READY)?>
-<?php $this->endContent() ?>
+    };
+    lanren.init();
+    $("#load_more").click(function ($event) {
+        lanren.loadMore();
+    })
+    <?php $this->endBlock()?>
+</script>
+<?php $this->registerJs($this->blocks['LOAD'],\yii\web\View::POS_READY)?>

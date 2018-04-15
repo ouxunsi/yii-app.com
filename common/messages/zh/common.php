@@ -75,4 +75,5 @@ return [
     'User ID' => '用户 ID',
     'Username' => '用户名',
     'Value' => '值',
+    'Draft' => '草稿'
 ];

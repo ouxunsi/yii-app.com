@@ -4,16 +4,12 @@ namespace frontend\controllers;
 
 use common\models\Article;
 use common\models\ArticleAttachment;
-use frontend\models\search\ArticleSearch;
+use common\models\ArticleCategory;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\web\Response;
 
-/**
- * @author Eugene Terentev <eugene@terentev.net>
- */
-class ArticleController extends Controller
+class JoinUsController extends Controller
 {
     /**
      * 方法描述：
@@ -22,7 +18,10 @@ class ArticleController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $category_id = Yii::$app->request->get('category_id');
+        $categories = ArticleCategory::find()->where(['parent_id'=>2,'status'=>1])->all();
+        $this->layout = '_clear';
+        return $this->render('index',['categories'=>$categories,'category_id'=>$category_id]);
     }
 
     /**

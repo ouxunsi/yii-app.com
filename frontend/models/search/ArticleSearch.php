@@ -11,13 +11,16 @@ use yii\data\ActiveDataProvider;
  */
 class ArticleSearch extends Article
 {
+
+    public $limit = 3;
+    public $offset = 0;
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['id', 'category_id'], 'integer'],
+            [['id', 'category_id', 'offset', 'limit'], 'integer'],
             [['slug', 'title'], 'safe'],
         ];
     }
@@ -33,18 +36,16 @@ class ArticleSearch extends Article
 
     /**
      * Creates data provider instance with search query applied
-     * @return ActiveDataProvider
+     * @param $params
+     * @return array
      */
     public function search($params)
     {
         $query = Article::find()->published();
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
-
+        $this->offset = $params['offset'] ?? $this->offset;
+        $this->limit  = $params['limit'] ?? $this->limit;
         if (!($this->load($params) && $this->validate())) {
-            return $dataProvider;
+            return [];
         }
 
         $query->andFilterWhere([
@@ -54,7 +55,8 @@ class ArticleSearch extends Article
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title]);
-
-        return $dataProvider;
+        $query->offset($this->offset)->limit($this->limit);
+        $models = $query->all();
+        return $models;
     }
 }

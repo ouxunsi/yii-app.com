@@ -29,6 +29,7 @@ class PageController extends Controller
         if (!$model) {
             throw new NotFoundHttpException(Yii::t('frontend', 'Page not found'));
         }
+        $this->layout = 'base';
         if($model->view == 'about'){
             $this->layout = '_clear';
         }
