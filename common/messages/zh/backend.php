@@ -43,6 +43,7 @@ return [
     'Categories' => '文章分类',
     'Clear' => '清除',
     'Content' => '内容',
+    'Contact' => '留言板',
     'Count' => '总数',
     'Create' => '创建',
     'Create {modelClass}' => '创建 {modelClass}',

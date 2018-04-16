@@ -5,8 +5,7 @@ use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
-/* @var $model \frontend\models\ContactForm */
-
+/* @var $model \common\models\Contact */
 $this->title = Yii::t('frontend','Contact');
 ?>
 <div class="margintop"></div>
@@ -19,13 +18,12 @@ $this->title = Yii::t('frontend','Contact');
             <div class="messagemod2tit1">留言版</div>
             <div class="selmod">
                 <form id="contact-form" action="/site/contact" method="post">
-                    <input type="hidden" name="_csrf"
-                           value="IIer_Zpw0a9ImcsGMtvTrHj0dJqUi9yCjA2qiK3dT-5Q6sWZ9zii6AXL_zAK7afEKJYC9va6lPTYW_PYlOsk3A==">
+                    <input name="_csrf" type="hidden" id="_csrf" value="<?= Yii::$app->request->csrfToken ?>">
                     <div class="seleft">
                         <div class="selkuang"><span class="txt0">姓名</span>
                             <span class="txt1mod">
-                <div class="form-group field-contactform-name required">
-<input type="text" id="contactform-name" class="txt1" name="ContactForm[name]" value="df" aria-required="true">
+                <div class="form-group field-Contact-name required">
+<input type="text" id="Contact-name" class="txt1" name="Contact[name]" value="df" aria-required="true">
 </div>                        </span>
                         </div>
                     </div>
@@ -33,8 +31,8 @@ $this->title = Yii::t('frontend','Contact');
                         <div class="selkuang">
                             <span class="txt0-1">手机号码或座机</span>
                             <span class="txt1mod-1">
-                            <div class="form-group field-contactform-email has-error">
-<input type="text" id="contactform-email" class="txt1" name="ContactForm[email]" value="df" aria-invalid="true">
+                            <div class="form-group field-Contact-email has-error">
+<input type="text" id="Contact-email" class="txt1" name="Contact[phone]" value="df" aria-invalid="true">
 </div>                        </span>
                         </div>
                     </div>
@@ -43,8 +41,8 @@ $this->title = Yii::t('frontend','Contact');
                             <div class="selkuang">
                                 <span class="txt0-2">留言</span>
                                 <span class="txt1mod-2">
-                                <div class="form-group field-contactform-body required">
-<textarea id="contactform-body" class="textareatit" name="ContactForm[body]" rows="5" cols="45" placeholder="请描述您的问题..."
+                                <div class="form-group field-Contact-body required">
+<textarea id="Contact-body" class="textareatit" name="Contact[body]" rows="5" cols="45" placeholder="请描述您的问题..."
           aria-required="true">df</textarea>
 </div>                        </span>
                             </div>
