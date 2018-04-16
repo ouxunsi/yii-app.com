@@ -113,8 +113,9 @@ class ArticleController extends ActiveController
             $limit = $params['limit'] ?? 3;
             $offset = $params['offset'] ?? 0;
             $this->layout = '_clean';
+            $model = ArticleCategory::findOne(['slug'=>'jobs']);
             if(empty($params['category_id'])){
-                $categories = ArticleCategory::find()->where(['parent_id'=>2])->indexBy('id')->asArray()->all();
+                $categories = ArticleCategory::find()->where(['parent_id'=>$model->id])->indexBy('id')->asArray()->all();
                 if(empty($categories)){
                     $models = [];
                 }else{
@@ -129,6 +130,35 @@ class ArticleController extends ActiveController
                 $data = [
                     'code' => 1,
                     'data' => $this->render('jobs-list', ['models' => $models])
+                ];
+            }else{
+                $data = [
+                    'code' => 404,
+                    'data' => ''
+                ];
+            }
+        }catch(\Exception $exception){
+            $data = [
+                'code' => $exception->getCode(),
+                'msg' => $exception->getMessage(),
+            ];
+        }
+        return $data;
+    }
+    public function actionGetActives(){
+        \Yii::$app->response->format = Response::FORMAT_JSON;
+        try {
+            $params = \Yii::$app->request->post();
+            $limit = $params['limit'] ?? 3;
+            $offset = $params['offset'] ?? 0;
+            $this->layout = '_clean';
+            $model = ArticleCategory::findOne(['slug'=>'actives']);
+            $models = Article::find()->published()->limit($limit)->offset($offset)
+                ->andFilterWhere(['category_id' => $model->id])->orderBy(['created_at' => SORT_DESC])->all();
+            if($models) {
+                $data = [
+                    'code' => 1,
+                    'data' => $this->render('actives-list', ['models' => $models])
                 ];
             }else{
                 $data = [

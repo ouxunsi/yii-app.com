@@ -18,7 +18,7 @@ $this->registerCss('body {background:#ededed;}');
                                     <li id="home"><a href="/#home">首页</a></li>
                                     <li id="product"><a href="/page/product-detail#product">产品介绍</a></li>
                                     <li id="news"><a href="/article#news">资讯</a></li>
-                                    <li id="active"><a href="/page/active#active">活动</a></li>
+                                    <li id="active"><a href="/active#active">活动</a></li>
                                     <li id="cooperation"><a href="/page/cooperation#cooperation">合作</a></li>
                                     <li id="faq"><a href="/site/contact#faq">咨询与帮助</a></li>
                                 </ul>
@@ -81,7 +81,7 @@ $this->registerCss('body {background:#ededed;}');
 
                     </li>
                     <li>
-                        <a href="/page/active#active" class="navbar-toggle partner-mob" data-target="#partner-mob"
+                        <a href="/active#active" class="navbar-toggle partner-mob" data-target="#partner-mob"
                            aria-expanded="false" aria-controls="partner-mob">活动 </a>
                     </li>
 

@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = Yii::$app->name;
+$this->title = Yii::t('frontend', Yii::$app->name);
 ?>
 
 <div class="pagemain">
@@ -15,3 +15,20 @@ $this->title = Yii::$app->name;
             <?= \common\widgets\DbText::widget(['key' => 'index-container7'])?>
         </div></div>
 </div>
+<?php $this->beginBlock('video_box')?>
+    <div class="boxshade">
+        <div class="videomod1">
+            <div class="videomod3">
+                <div class="videomod4">
+                    <div class="videoclosebtn" onclick="closevideoplay();">×</div>
+                    <video id="media" width="100%" height="100%" controls="controls">
+
+                        <source src="/video/aboutproduct.mp4" type="video/mp4">
+
+                    </video>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<?php $this->endBlock();?>

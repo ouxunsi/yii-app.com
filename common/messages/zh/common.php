@@ -17,12 +17,12 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'API access token' => '',
-    'Email' => '',
-    'Expire At' => '',
-    'Not Active' => '',
-    'Password' => '',
-    'Roles' => '',
+    'API access token' => '接口安全口令',
+    'Email' => '邮箱',
+    'Expire At' => '有效期至',
+    'Not Active' => '不可用',
+    'Password' => '密码',
+    'Roles' => '角色',
     'Token' => '',
     '"{attribute}" must be a valid JSON' => '"{attribute}" 必须是一个有效的JSON格式',
     'Active' => '活动',

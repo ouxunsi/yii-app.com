@@ -7,75 +7,11 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
 
-$this->title = 'Contact';
+$this->title = Yii::t('frontend','Contact');
 ?>
 <div class="margintop"></div>
 <?= \common\widgets\DbText::widget(['key'=>'faq-banner'])?>
 <?= \common\widgets\DbText::widget(['key'=>'faq-list'])?>
-<!--<div class=" messagemod1">-->
-<!--    <div class="pagemain1">-->
-<!--        <div class="messagemod2">-->
-<!--            <div class="messagemod2tit1">留言版</div>-->
-<!--            <div class="selmod">-->
-<!--                --><?php //$form = ActiveForm::begin([
-//                    'id' => 'contact-form',
-//                    'fieldConfig' => [
-//                        'template' => '{input}',
-//                    ]
-//                ]); ?>
-<!--                <div class="seleft">-->
-<!--                    <div class="selkuang"><span class="txt0">姓名</span>-->
-<!--                        <span class="txt1mod">-->
-<!--                --><?//= $form->field($model, 'name')->textInput(['class' => 'txt1']) ?>
-<!--                        </span>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="selright">-->
-<!--                    <div class="selkuang">-->
-<!--                        <span class="txt0-1">手机号码或座机</span>-->
-<!--                        <span class="txt1mod-1">-->
-<!--                            --><?//= $form->field($model, 'email')->textInput(['class' => 'txt1']) ?>
-<!--                        </span>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="selmod">-->
-<!--                    <div class="textareamod">-->
-<!--                        <div class="selkuang">-->
-<!--                            <span class="txt0-2">留言</span>-->
-<!--                            <span class="txt1mod-2">-->
-<!--                                --><?//= $form->field($model, 'body')->textArea([
-//                                    'rows' => 5,
-//                                    'cols' => 45,
-//                                    'class' => 'textareatit',
-//                                    'placeholder' => '请描述您的问题...',
-//                                ]) ?>
-<!--                        </span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="btnmod">-->
-<!--                    <div class="btnmod1">-->
-<!--                        --><?//= Html::submitButton(Yii::t('frontend', 'Submit'), [
-//                            'class' => 'messagebtn1',
-//                            'name' => 'contact-button',
-//                            'onmouseover' => "this.className='messagebtn1hover'",
-//                            'onmouseout' => "this.className='messagebtn1'",
-//                        ]) ?>
-<!--                    </div>-->
-<!--                    <div class="btnmod2">-->
-<!--                        --><?//= Html::resetButton(Yii::t('frontend', 'Reset'), [
-//                            'class' => 'messagebtn2',
-//                            'name' => 'contact-button-reset',
-//                            'onmouseover' => "this.className='messagebtn1hover'",
-//                            'onmouseout' => "this.className='messagebtn1'",
-//                        ]) ?>
-<!--                    </div>-->
-<!--                </div>-->
-<!--                --><?php //ActiveForm::end(); ?>
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 
 <div class=" messagemod1">
     <div class="pagemain1">

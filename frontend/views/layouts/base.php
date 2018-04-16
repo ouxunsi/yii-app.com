@@ -18,7 +18,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                                         <li id="home"><a href="/#home">首页</a></li>
                                         <li id="product"><a href="/page/product-detail#product">产品介绍</a></li>
                                         <li id="news"><a href="/article#news">资讯</a></li>
-                                        <li id="active"><a href="/page/active#active">活动</a></li>
+                                        <li id="active"><a href="/active#active">活动</a></li>
                                         <li id="cooperation"><a href="/page/cooperation#cooperation">合作</a></li>
                                         <li id="faq"><a href="/site/contact#faq">咨询与帮助</a></li>
                                     </ul>
@@ -68,7 +68,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
 
                         </li>
                         <li>
-                            <a href="/page/active#active" class="navbar-toggle partner-mob" data-target="#partner-mob"
+                            <a href="/active#active" class="navbar-toggle partner-mob" data-target="#partner-mob"
                                aria-expanded="false" aria-controls="partner-mob">活动 </a>
                         </li>
 
@@ -101,7 +101,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                             <div class="logo1"><a target="_blank" href="http://www.hxgro.com"><img
                                             src="/images/logo1.jpg"/></a></div>
                             <div class="copyrightmod2tit">
-                                <div class="copyrightmod2tit1"><a href="<?= \yii\helpers\Url::toRoute(['page/view','slug'=>'about'])?>">公司介绍</a></div>
+                                <div class="copyrightmod2tit1"><a href="/page/about-company">公司介绍</a></div>
                                 <div class="copyrightmod2tit2">|</div>
                                 <div class="copyrightmod2tit1"><a href="/page/about-youguan">恒信东方儿童优馆</a></div>
                                 <div class="copyrightmod2tit2">|</div>
@@ -163,21 +163,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
 
             </div>
         </div>
-        <div class="boxshade">
-            <div class="videomod1">
-                <div class="videomod3">
-                    <div class="videomod4">
-                        <div class="videoclosebtn" onclick="closevideoplay();">×</div>
-                        <video id="media" width="100%" height="100%" controls="controls">
-
-                            <source src="/video/aboutproduct.mp4" type="video/mp4">
-
-                        </video>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?= $this->blocks['video_box']?>
     </div>
 
     <script>
