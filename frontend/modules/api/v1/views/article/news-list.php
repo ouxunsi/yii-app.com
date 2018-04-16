@@ -9,12 +9,7 @@ use yii\helpers\Html;
             <div class="zxmod3">
                 <div class="zxpic"><a href="<?= \yii\helpers\Url::toRoute(['/article/view', 'slug'=>$model->slug])?>">
                         <?php if ($model->thumbnail_path): ?>
-                            <?php echo Html::img(
-                                Yii::$app->glide->createSignedUrl([
-                                    'glide/index',
-                                    'path' => $model->thumbnail_path,
-                                    'w' => 100
-                                ], true),
+                            <?php echo Html::img($model->thumbnail_base_url.'/'.$model->thumbnail_path,
                                 ['class' => 'article-thumb img-rounded pull-left']
                             ) ?>
                         <?php endif; ?></a></div>

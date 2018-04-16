@@ -10,6 +10,9 @@ return [
         'glide' => '\trntv\glide\controllers\GlideController'
     ],
     'components' => [
+        'request' => [
+            'baseUrl' => '/storage',
+        ],
         'urlManager'=>require(__DIR__.'/_urlManager.php'),
         'glide' => [
             'class' => 'trntv\glide\components\Glide',
