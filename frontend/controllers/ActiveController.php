@@ -23,7 +23,7 @@ class ActiveController extends Controller
     public function actionIndex()
     {
         $model = ArticleCategory::findOne(['slug'=>'actives']);
-        $active = Article::find()->published()->where(['category_id'=>$model->id])->one();
+        $active = Article::find()->where(['category_id'=>$model->id])->published()->one();
         if($model->status == ArticleCategory::STATUS_DRAFT || empty($active)){
             return $this->redirect(Url::toRoute(['page/view','slug'=>'not-active']));
         }
