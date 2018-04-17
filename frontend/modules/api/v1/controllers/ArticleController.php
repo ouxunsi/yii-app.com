@@ -85,7 +85,7 @@ class ArticleController extends ActiveController
             $offset = $params['offset'] ?? 0;
             $this->layout = '_clean';
             $models = Article::find()->published()->limit($limit)->offset($offset)
-                ->andFilterWhere(['category_id'=>$params['category_id']])->orderBy(['created_at'=>SORT_DESC])->all();
+                ->andFilterWhere(['category_id'=>$params['category_id']])->orderBy(['published_at'=>SORT_DESC])->all();
             if($models) {
                 $data = [
                     'code' => 1,
@@ -120,11 +120,11 @@ class ArticleController extends ActiveController
                     $models = [];
                 }else{
                     $models = Article::find()->published()->limit($limit)->offset($offset)
-                        ->andFilterWhere(['category_id' => array_keys($categories)])->orderBy(['created_at' => SORT_DESC])->all();
+                        ->andFilterWhere(['category_id' => array_keys($categories)])->orderBy(['published_at' => SORT_DESC])->all();
                 }
             }else {
                 $models = Article::find()->published()->limit($limit)->offset($offset)
-                    ->andFilterWhere(['category_id' => $params['category_id']])->orderBy(['created_at' => SORT_DESC])->all();
+                    ->andFilterWhere(['category_id' => $params['category_id']])->orderBy(['published_at' => SORT_DESC])->all();
             }
             if($models) {
                 $data = [
