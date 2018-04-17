@@ -5,6 +5,7 @@ $config = [
     'extensions' => require(__DIR__ . '/../../vendor/yiisoft/extensions.php'),
     'sourceLanguage' => 'en-US',
     'language' => 'zh-CN',
+    'timeZone' => 'Asia/Shanghai',
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',

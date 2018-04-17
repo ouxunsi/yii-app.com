@@ -16,31 +16,36 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
 
-    <?php echo GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'options' => [
-            'class' => 'grid-view table-responsive'
-        ],
-        'columns' => [
-            'id',
-            'name',
-            'phone',
-            'body',
-            [
-                'attribute' => 'created_at',
-                'format' => 'datetime',
-                'filter' => DateTimeWidget::widget([
-                    'model' => $searchModel,
-                    'attribute' => 'created_at',
-                    'phpDatetimeFormat' => 'dd.MM.yyyy',
-                    'momentDatetimeFormat' => 'DD.MM.YYYY',
-                    'clientEvents' => [
-                        'dp.change' => new JsExpression('(e) => $(e.target).find("input").trigger("change.yiiGridView")')
-                    ],
-                ])
+    <?php try {
+        echo GridView::widget([
+            'dataProvider' => $dataProvider,
+            'filterModel' => $searchModel,
+            'options' => [
+                'class' => 'grid-view table-responsive',
+                'style' => 'min-height:300px',
             ],
-        ],
-    ]); ?>
+            'columns' => [
+                'id',
+                'name',
+                'phone',
+                'body',
+                [
+                    'attribute' => 'created_at',
+//                    'format' => 'datetime',
+                    'filter' => DateTimeWidget::widget([
+                        'model' => $searchModel,
+                        'attribute' => 'created_at',
+                        'phpDatetimeFormat' => 'yyyy.MM.dd',
+                        'momentDatetimeFormat' => 'YYYY-MM-DD',
+                        'clientEvents' => [
+                            'dp.change' => new JsExpression('(e) => $(e.target).find("input").trigger("change.yiiGridView")')
+                        ],
+                    ])
+                ],
+            ],
+        ]);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    } ?>
 
 </div>

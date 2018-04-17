@@ -38,12 +38,6 @@ class ContactSearch extends Contact
         if (!($this->load($params) && $this->validate())) {
             return $dataProvider;
         }
-
-        $query->andFilterWhere([
-            'id' => $this->id,
-            'status' => $this->status,
-        ]);
-
         if ($this->created_at !== null) {
             $query->andFilterWhere(['between', 'created_at', date('Y-m-d',strtotime($this->created_at)), date('Y-m-d',strtotime($this->created_at)+3600*24)]);
         }
