@@ -128,6 +128,10 @@ $this->title = Yii::t('frontend','Contact');
 </div>
 <script type="text/javascript">
     <?php $this->beginBlock('CHECK_JS')?>
+    var msg = '<?= $msg?>';
+    if(msg){
+        alert(msg);
+    }
     $('#contact-form').submit(function (event) {
         if($('#Contact-name').val()==""){
             alert("请输入您的姓名");

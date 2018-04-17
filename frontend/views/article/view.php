@@ -9,7 +9,7 @@ $this->title = $model->title;
         <div class="zxcon">
             <div class="zxdh"><a href="index.html">首页</a>&gt;资讯</div>
             <div class="zxtit"><?= $model->title ?></div>
-            <div class="zxtime"><?= Yii::$app->formatter->asDatetime($model->created_at, 'php:Y-m-d') ?></div>
+            <div class="zxtime"><?= Yii::$app->formatter->asDatetime($model->published_at, 'php:Y-m-d') ?></div>
             <article class="zxcon1">
                 <?= $model->body ?>
                 <?php if (!empty($model->articleAttachments)): ?>

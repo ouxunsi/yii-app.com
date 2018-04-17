@@ -42,8 +42,13 @@ class SiteController extends Controller
         $model = new Contact();
         try{
             if ($model->load(Yii::$app->request->post())) {
-                if($model->save(false)) {
+                if($model->save()) {
                     return $this->refresh();
+                }else{
+                    return $this->render('contact',[
+                        'model'=>$model,
+                        'msg'=>array_shift($model->firstErrors)
+                    ]);
                 }
             }
         }catch (\Exception $exception){

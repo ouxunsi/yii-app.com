@@ -14,7 +14,7 @@ use yii\helpers\Html;
                             ) ?>
                         <?php endif; ?></a></div>
                 <div class="zxmod3con">
-                    <div class="zxmod3tit1"><?php echo Yii::$app->formatter->asDatetime($model->created_at,'php:Y/m/d') ?></div>
+                    <div class="zxmod3tit1"><?php echo Yii::$app->formatter->asDatetime($model->published_at,'php:Y/m/d') ?></div>
                     <div class="zxmod3tit2" style="font-size: 15.5833px; line-height: 18.7px;">
                         <?php echo Html::a($model->title, \yii\helpers\Url::toRoute(['/article/view', 'slug'=>$model->slug])) ?>
                     </div>
