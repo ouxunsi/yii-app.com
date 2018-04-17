@@ -3,14 +3,9 @@
 namespace backend\controllers;
 
 use backend\models\search\ContactSearch;
-use backend\models\search\UserSearch;
-use backend\models\UserForm;
 use common\models\Contact;
-use common\models\User;
-use common\models\UserToken;
 use Yii;
-use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
@@ -19,7 +14,6 @@ use yii\web\NotFoundHttpException;
  */
 class ContactController extends Controller
 {
-
     /**
      * Lists all Contact models.
      * @return mixed
@@ -47,6 +41,21 @@ class ContactController extends Controller
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
+    }
+
+    /**
+     * 方法描述：留言删除
+     * @param $id
+     * @throws NotFoundHttpException
+     * @throws \Exception
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
+     * 注意：
+     */
+    public function actionDelete($id){
+        $model = $this->findModel($id);
+        $model->delete();
+        $this->redirect(Url::toRoute(['contact/index']));
     }
 
     /**

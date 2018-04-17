@@ -25,6 +25,7 @@ return [
     'Application settings' => '系统设置',
     'Application timeline' => '应用程序时间轴',
     'Are you sure you want to delete this item?' => '你确定要删除这条记录?',
+    'Are you sure you want to delete this contact?' => '你确定要删除这条留言?',
     'Are you sure you want to flush this cache?' => '你确定要清空所以缓存?',
     'Article Categories' => '文章分类',
     'Articles' => '文章',
