@@ -321,13 +321,13 @@ header .mob_nav_open ul li a {
 .videomod1{position:absolute;width:50%;left:25%;top:10%;z-index:10000;cursor:pointer;}
 .videoclosebtn{float:right;color:#ffffff;font-size:20px;cursor:pointer;}
 
-.section01icon_01{position:absolute;left:30.625%;width:6%;bottom:2.28%;z-index:99999;}
+.section01icon_01{position:absolute;left:30.625%;width:6%;bottom:2.28%;z-index:9;}
 .section01icon_01 img{float:left;width:100%;height:auto;}
-.section01icon_02{position:absolute;left:38.8%;width:3.69%;bottom:2.28%;z-index:99999;}
+.section01icon_02{position:absolute;left:38.8%;width:3.69%;bottom:2.28%;z-index:9;}
 .section01icon_02 img{float:left;width:100%;height:auto;}
-.section01icon_03{position:absolute;left:55.78%;width:4.89%;bottom:2.28%;z-index:99999;}
+.section01icon_03{position:absolute;left:55.78%;width:4.89%;bottom:2.28%;z-index:9;}
 .section01icon_03 img{float:left;width:100%;height:auto;}
-.section01icon_04{position:absolute;left:63.33%;width:5.67%;bottom:2.28%;z-index:99999;}
+.section01icon_04{position:absolute;left:63.33%;width:5.67%;bottom:2.28%;z-index:9;}
 .section01icon_04 img{float:left;width:100%;height:auto;}
 .videoplaymod{width:100%;position:relative;z-index:1;}
 .videomod2{width:50%;margin:0 auto;}
@@ -339,10 +339,10 @@ header .mob_nav_open ul li a {
 .more a{float:left;width:100%;height:47px;line-height:47px;text-align:center;font-size:14px;color:#999999;background:#f2f3f3;border-radius:5px;}
 .more a:hover{float:left;width:100%;height:47px;line-height:47px;text-align:center;font-size:14px;color:#333333;background:#e8e8e8;border-radius:5px;}
 @media (max-width: 767px) {
-.section01icon_01{position:absolute;left:9.5%;width:14.5%;bottom:8.4%;z-index:99999;}
-.section01icon_02{position:absolute;left:27.5%;width:9.1%;bottom:8.4%;z-index:99999;}
-.section01icon_03{position:absolute;left:62.9%;width:11.6%;bottom:8.4%;z-index:99999;}
-.section01icon_04{position:absolute;left:78.8%;width:14%;bottom:8.4%;z-index:99999;}
+.section01icon_01{position:absolute;left:9.5%;width:14.5%;bottom:8.4%;z-index:9;}
+.section01icon_02{position:absolute;left:27.5%;width:9.1%;bottom:8.4%;z-index:9;}
+.section01icon_03{position:absolute;left:62.9%;width:11.6%;bottom:8.4%;z-index:9;}
+.section01icon_04{position:absolute;left:78.8%;width:14%;bottom:8.4%;z-index:9;}
 .more{width:90%;margin:0 auto;display:inline-block;}
 .more a:hover{color:#999999;}
 .zxmod3tit3{display:none;}

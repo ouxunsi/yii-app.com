@@ -64,6 +64,7 @@ return [
     'Reset' => '重置',
     'Thank you for contacting us. We will respond to you as soon as possible.' => '感谢你您联系我们，我们会尽快回复',
     'There was an error sending email.' => '发送邮件时发生错误',
+    'There was an error sending message.' => '发送留言时发生错误',
     'This email address has already been taken.' => '此邮件已被占用',
     'This username has already been taken.' => '用户名已经被占用',
     'Update' => '更新',

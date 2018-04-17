@@ -3,11 +3,10 @@
 /* @var $model common\models\Article */
 $this->title = $model->title;
 ?>
-<div class="margintop"></div>
 <div class="zxmod0">
     <div class="pagemain1">
         <div class="zxcon">
-            <div class="zxdh"><a href="index.html">首页</a>&gt;资讯</div>
+            <div class="zxdh"><a href="/">首页</a>&gt;资讯</div>
             <div class="zxtit"><?= $model->title ?></div>
             <div class="zxtime"><?= Yii::$app->formatter->asDatetime($model->published_at, 'php:Y-m-d') ?></div>
             <article class="zxcon1">

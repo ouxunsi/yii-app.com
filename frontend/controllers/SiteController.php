@@ -43,11 +43,14 @@ class SiteController extends Controller
         try{
             if ($model->load(Yii::$app->request->post())) {
                 if($model->save()) {
-                    return $this->refresh();
+                    return $this->render('contact',[
+                        'model'=>$model,
+                        'msg'=>array_shift(Yii::t('frontend','Thank you for contacting us. We will respond to you as soon as possible.'))
+                    ]);
                 }else{
                     return $this->render('contact',[
                         'model'=>$model,
-                        'msg'=>array_shift($model->firstErrors)
+                        'msg'=>array_shift(Yii::t('frontend','There was an error sending message.'))
                     ]);
                 }
             }
