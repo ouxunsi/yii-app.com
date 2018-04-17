@@ -32,7 +32,7 @@ $this->title = Yii::t('frontend','Contact');
                             <span class="txt0-1">手机号码或座机</span>
                             <span class="txt1mod-1">
                             <div class="form-group field-Contact-email has-error">
-<input type="text" id="Contact-email" class="txt1" name="Contact[phone]" value="df" aria-invalid="true">
+<input type="text" id="Contact-phone" class="txt1" name="Contact[phone]" value="df" aria-invalid="true">
 </div>                        </span>
                         </div>
                     </div>
@@ -125,5 +125,26 @@ $this->title = Yii::t('frontend','Contact');
 
     </div>
 
-
 </div>
+<script type="text/javascript">
+    <?php $this->beginBlock('CHECK_JS')?>
+    $('#contact-form').submit(function (event) {
+        if($('#Contact-name').val()==""){
+            alert("请输入您的姓名");
+            $('#Contact-name').focus();
+            return false;
+        }
+        if($('#Contact-phone').val()==""){
+            alert("请输入您的联系电话");
+            $('#Contact-phone').focus();
+            return false;
+        }
+        if($('#Contact-body').val()==""){
+            alert("请输入留言内容");
+            $('#Contact-body').focus();
+            return false;
+        }
+    });
+    <?php $this->endBlock()?>
+</script>
+<?php $this->registerJs($this->blocks['CHECK_JS'],\yii\web\View::POS_END)?>

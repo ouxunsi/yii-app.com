@@ -47,7 +47,6 @@ class HejiahuanFrontendAsset extends AssetBundle
      */
     public $depends = [
         YiiAsset::class,
-        BootstrapAsset::class,
         Html5shiv::class,
     ];
 }
