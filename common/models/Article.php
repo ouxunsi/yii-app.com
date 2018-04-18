@@ -13,31 +13,35 @@ use yii\db\ActiveRecord;
 /**
  * This is the model class for table "article".
  *
- * @property integer             $id
- * @property string              $slug
- * @property string              $title
- * @property string              $body
- * @property string              $view
- * @property string              $thumbnail_base_url
- * @property string              $thumbnail_path
- * @property array               $attachments
- * @property integer             $category_id
- * @property integer             $status
- * @property integer             $published_at
- * @property integer             $created_by
- * @property integer             $updated_by
- * @property integer             $created_at
- * @property integer             $updated_at
+ * @property integer $id
+ * @property string $slug
+ * @property string $title
+ * @property string $body
+ * @property string $view
+ * @property string $thumbnail_base_url
+ * @property string $thumbnail_path
+ * @property string $banner_pc_base_url
+ * @property string $banner_pc_path
+ * @property string $banner_wap_base_url
+ * @property string $banner_wap_path
+ * @property array $attachments
+ * @property integer $category_id
+ * @property integer $status
+ * @property integer $published_at
+ * @property integer $created_by
+ * @property integer $updated_by
+ * @property integer $created_at
+ * @property integer $updated_at
  *
- * @property User                $author
- * @property User                $updater
- * @property ArticleCategory     $category
+ * @property User $author
+ * @property User $updater
+ * @property ArticleCategory $category
  * @property ArticleAttachment[] $articleAttachments
  */
 class Article extends ActiveRecord
 {
     const STATUS_PUBLISHED = 1;
-    const STATUS_DRAFT     = 0;
+    const STATUS_DRAFT = 0;
 
     /**
      * @var array
@@ -48,6 +52,14 @@ class Article extends ActiveRecord
      * @var array
      */
     public $thumbnail;
+    /**
+     * @var array
+     */
+    public $banner_pc;
+    /**
+     * @var array
+     */
+    public $banner_wap;
 
     /**
      * @inheritdoc
@@ -107,6 +119,18 @@ class Article extends ActiveRecord
                 'pathAttribute' => 'thumbnail_path',
                 'baseUrlAttribute' => 'thumbnail_base_url',
             ],
+            [
+                'class' => UploadBehavior::class,
+                'attribute' => 'banner_pc',
+                'pathAttribute' => 'banner_pc_path',
+                'baseUrlAttribute' => 'banner_pc_base_url',
+            ],
+            [
+                'class' => UploadBehavior::class,
+                'attribute' => 'banner_wap',
+                'pathAttribute' => 'banner_wap_path',
+                'baseUrlAttribute' => 'banner_wap_base_url',
+            ],
         ];
     }
 
@@ -125,10 +149,15 @@ class Article extends ActiveRecord
             [['published_at'], 'filter', 'filter' => 'strtotime', 'skipOnEmpty' => true],
             [['category_id'], 'exist', 'targetClass' => ArticleCategory::class, 'targetAttribute' => 'id'],
             [['status'], 'integer'],
-            [['slug', 'thumbnail_base_url', 'thumbnail_path'], 'string', 'max' => 1024],
+            [[
+                'slug',
+                'thumbnail_base_url', 'thumbnail_path',
+                'banner_pc_base_url', 'banner_pc_path',
+                'banner_wap_base_url', 'banner_wap_path'
+            ], 'string', 'max' => 1024],
             [['title'], 'string', 'max' => 512],
             [['view'], 'string', 'max' => 255],
-            [['attachments', 'thumbnail'], 'safe'],
+            [['attachments', 'thumbnail', 'banner_pc', 'banner_wap'], 'safe'],
         ];
     }
 
@@ -144,6 +173,8 @@ class Article extends ActiveRecord
             'body' => Yii::t('common', 'Body'),
             'view' => Yii::t('common', 'Article View'),
             'thumbnail' => Yii::t('common', 'Thumbnail'),
+            'banner_pc' => Yii::t('common', 'Banner PC'),
+            'banner_wap' => Yii::t('common', 'Banner wap'),
             'category_id' => Yii::t('common', 'Category'),
             'status' => Yii::t('common', 'Published'),
             'published_at' => Yii::t('common', 'Published At'),

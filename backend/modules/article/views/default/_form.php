@@ -10,7 +10,6 @@ use yii\helpers\Html;
  * @var $model      common\models\Article
  * @var $categories common\models\ArticleCategory[]
  */
-
 ?>
 
 <?php $form = ActiveForm::begin([
@@ -47,7 +46,6 @@ use yii\helpers\Html;
         ],
     ]
 ) ?>
-
 <?php echo $form->field($model, 'thumbnail')->widget(
     Upload::class,
     [
@@ -56,6 +54,21 @@ use yii\helpers\Html;
     ]);
 ?>
 
+<?php echo $form->field($model, 'banner_pc')->widget(
+    Upload::class,
+    [
+        'url' => ['/file/storage/upload'],
+        'maxFileSize' => 5000000, // 5 MiB
+    ]);
+?>
+
+<?php echo $form->field($model, 'banner_wap')->widget(
+    Upload::class,
+    [
+        'url' => ['/file/storage/upload'],
+        'maxFileSize' => 5000000, // 5 MiB
+    ]);
+?>
 <?php echo $form->field($model, 'attachments')->widget(
     Upload::class,
     [

@@ -53,7 +53,6 @@ class DefaultController extends Controller
         $article = new Article();
 
         $this->performAjaxValidation($article);
-
         if ($article->load(Yii::$app->request->post()) && $article->save()) {
             return $this->redirect(['index']);
         } else {

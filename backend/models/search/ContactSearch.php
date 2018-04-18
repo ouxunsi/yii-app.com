@@ -34,8 +34,8 @@ class ContactSearch extends Contact
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-
-        if (!($this->load($params) && $this->validate())) {
+        $this->load($params);
+        if (!$this->validate()) {
             return $dataProvider;
         }
         if ($this->created_at !== null) {
@@ -44,7 +44,7 @@ class ContactSearch extends Contact
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'phone', $this->phone])
-            ->andFilterWhere(['like', 'body', $this->body]);
+            ->andFilterWhere(['like', 'body', $this->body])->orderBy(['id'=>SORT_DESC]);
 
         return $dataProvider;
     }
