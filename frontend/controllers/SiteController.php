@@ -45,12 +45,12 @@ class SiteController extends Controller
                 if($model->save()) {
                     return $this->render('contact',[
                         'model'=>$model,
-                        'msg'=>array_shift(Yii::t('frontend','Thank you for contacting us. We will respond to you as soon as possible.'))
+                        'msg'=>Yii::t('frontend','Thank you for contacting us. We will respond to you as soon as possible.')
                     ]);
                 }else{
                     return $this->render('contact',[
                         'model'=>$model,
-                        'msg'=>array_shift(Yii::t('frontend','There was an error sending message.'))
+                        'msg'=>Yii::t('frontend','There was an error sending message.')
                     ]);
                 }
             }
