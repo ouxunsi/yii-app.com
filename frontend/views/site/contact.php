@@ -22,7 +22,7 @@ $this->title = Yii::t('frontend', 'Contact');
                             <div class="selkuang"><span class="txt0">姓名</span>
                                 <span class="txt1mod">
                 <div class="form-group field-Contact-name required">
-<input type="text" id="Contact-name" class="txt1" name="Contact[name]" value="df" aria-required="true">
+<input type="text" id="Contact-name" class="txt1" name="Contact[name]" value="" aria-required="true">
 </div>                        </span>
                             </div>
                         </div>
@@ -31,7 +31,7 @@ $this->title = Yii::t('frontend', 'Contact');
                                 <span class="txt0-1">手机号码或座机</span>
                                 <span class="txt1mod-1">
                             <div class="form-group field-Contact-email has-error">
-<input type="text" id="Contact-phone" class="txt1" name="Contact[phone]" value="df" aria-invalid="true">
+<input type="text" id="Contact-phone" class="txt1" name="Contact[phone]" value="" aria-invalid="true">
 </div>                        </span>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ $this->title = Yii::t('frontend', 'Contact');
                                 <span class="txt1mod-2">
                                 <div class="form-group field-Contact-body required">
 <textarea id="Contact-body" class="textareatit" name="Contact[body]" rows="5" cols="45" placeholder="请描述您的问题..."
-          aria-required="true">df</textarea>
+          aria-required="true"></textarea>
 </div>                        </span>
                             </div>
                         </div>

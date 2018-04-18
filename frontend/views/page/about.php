@@ -12,7 +12,7 @@ $this->registerCss('body {background:#ededed;}');
                 <div class="container">
                     <div class="hjh-pc">
                         <div class="headtop">
-                            <div class="logo"><a href="index.html"><img src="/images/logo.jpg"></a></div>
+                            <div class="logo"><a href="/"><img src="/images/logo.jpg"></a></div>
                             <div class="topnav">
                                 <ul>
                                     <li id="home"><a href="/#home">首页</a></li>
@@ -69,7 +69,7 @@ $this->registerCss('body {background:#ededed;}');
 
                     </li>
                     <li>
-                        <a href="chanpinshow.html" class="navbar-toggle primary-nav-enterprise-mob"
+                        <a href="/page/product-detail" class="navbar-toggle primary-nav-enterprise-mob"
                            data-target="#primary-nav-enterprise-mob" aria-expanded="false"
                            aria-controls="primary-nav-enterprise-mob">产品介绍 </a>
 

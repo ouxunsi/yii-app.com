@@ -22,7 +22,7 @@ $this->title = Yii::t('frontend', 'Articles')
 <script>
     <?php $this->beginBlock('LOAD')?>
     var lanren = {
-        _default: 3, //默认显示图片个数
+        _default: 9, //默认显示图片个数
         _loading: 3,  //每次点击按钮后加载的个数
         _page_now: 1,
         init:function () {

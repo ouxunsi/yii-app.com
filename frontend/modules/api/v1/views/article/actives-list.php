@@ -12,7 +12,7 @@ use yii\helpers\Html;
                             ['class' => 'article-thumb img-rounded pull-left']
                         ) ?>
                     <?php endif; ?></a>
-                <div class="huodongmod3tit1"><a href="<?= \yii\helpers\Url::toRoute(['/article/view', 'slug'=>$model->slug])?>"><?= $model->title?></a></div>
+                <div class="huodongmod3tit1"><a href="<?= \yii\helpers\Url::toRoute(['/article/view', 'slug'=>$model->slug])?>"><?= \yii\helpers\StringHelper::truncate($model->title, 52, '……', null, true)?></a></div>
             </div>
         </div>
     </li>
