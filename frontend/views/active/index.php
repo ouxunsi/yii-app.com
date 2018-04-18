@@ -50,7 +50,7 @@ $this->title = Yii::t('frontend', 'Actives')
                 }
                 $.ajax('/api/v1/article/get-actives', {
                     method: 'post',
-                    data: {offset: offset + 1, limit: limit, category_id: 1},
+                    data: {offset: offset, limit: limit, category_id: 1},
                     dataType: 'json',
                     success: function (data) {
                         if (data.code == 1) {
