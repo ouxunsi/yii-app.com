@@ -137,7 +137,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                                     src="/images/logo1min.png"/></a></div>
                     <div class="copyrightmod2-1">
                         <div class="copyrightmod2tit">
-                            <div class="copyrightmod2tit1"><a href="/page/about-comany">公司介绍</a></div>
+                            <div class="copyrightmod2tit1"><a href="/page/about-company">公司介绍</a></div>
                             <div class="copyrightmod2tit1"><a href="/page/about-youguan">恒信东方儿童优馆</a></div>
                             <div class="copyrightmod2tit1"><a href="/page/about-youpin">恒信东方儿童优品</a></div>
                         </div>

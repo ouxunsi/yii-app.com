@@ -145,6 +145,7 @@ class ArticleController extends ActiveController
         }
         return $data;
     }
+
     public function actionGetActives(){
         \Yii::$app->response->format = Response::FORMAT_JSON;
         try {
