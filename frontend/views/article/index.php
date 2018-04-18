@@ -44,6 +44,7 @@ $this->title = Yii::t('frontend', 'Articles')
                     if(data.code == 1){
                         $(".lanren ul.list").append(data.data);
                         that._page_now ++;
+                        fontResize();
                     }else{
                         $('.lanren .more').html("<p>全部加载完毕</p>");
                     }

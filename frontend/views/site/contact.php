@@ -35,31 +35,31 @@ $this->title = Yii::t('frontend', 'Contact');
 </div>                        </span>
                             </div>
                         </div>
-                        <div class="selmod">
-                            <div class="textareamod">
-                                <div class="selkuang">
-                                    <span class="txt0-2">留言</span>
-                                    <span class="txt1mod-2">
+                    </div>
+                    <div class="selmod">
+                        <div class="textareamod">
+                            <div class="selkuang">
+                                <span class="txt0-2">留言</span>
+                                <span class="txt1mod-2">
                                 <div class="form-group field-Contact-body required">
 <textarea id="Contact-body" class="textareatit" name="Contact[body]" rows="5" cols="45" placeholder="请描述您的问题..."
           aria-required="true">df</textarea>
 </div>                        </span>
-                                </div>
                             </div>
                         </div>
-                        <div class="btnmod">
-                            <div class="btnmod1">
-                                <button type="submit" class="messagebtn1" name="contact-button"
-                                        onmouseover="this.className='messagebtn1hover'"
-                                        onmouseout="this.className='messagebtn1'">提交
-                                </button>
-                            </div>
-                            <div class="btnmod2">
-                                <button type="reset" class="messagebtn2" name="contact-button-reset"
-                                        onmouseover="this.className='messagebtn1hover'"
-                                        onmouseout="this.className='messagebtn1'">重置
-                                </button>
-                            </div>
+                    </div>
+                    <div class="btnmod">
+                        <div class="btnmod1">
+                            <button type="submit" class="messagebtn1" name="contact-button"
+                                    onmouseover="this.className='messagebtn1hover'"
+                                    onmouseout="this.className='messagebtn1'">提交
+                            </button>
+                        </div>
+                        <div class="btnmod2">
+                            <button type="reset" class="messagebtn2" name="contact-button-reset"
+                                    onmouseover="this.className='messagebtn1hover'"
+                                    onmouseout="this.className='messagebtn1'">重置
+                            </button>
                         </div>
                     </div>
                 </form>
