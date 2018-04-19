@@ -155,7 +155,7 @@ class ArticleController extends ActiveController
             $this->layout = '_clean';
             $model = ArticleCategory::findOne(['slug'=>'actives']);
             $models = Article::find()->published()->limit($limit)->offset($offset)
-                ->andFilterWhere(['category_id' => $model->id])->orderBy(['created_at' => SORT_DESC])->all();
+                ->andFilterWhere(['category_id' => $model->id])->orderBy(['published_at' => SORT_DESC])->all();
             if($models) {
                 $data = [
                     'code' => 1,
