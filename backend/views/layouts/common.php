@@ -225,12 +225,12 @@ $bundle = BackendAsset::register($this);
                         'label' => Yii::t('backend', 'System'),
                         'options' => ['class' => 'header'],
                     ],
-                    [
-                        'label' => Yii::t('backend', 'Translation'),
-                        'url' => ['/translation/default/index'],
-                        'icon' => '<i class="fa fa-language"></i>',
-                        'active' => (Yii::$app->controller->module->id == 'translation'),
-                    ],
+//                    [
+//                        'label' => Yii::t('backend', 'Translation'),
+//                        'url' => ['/translation/default/index'],
+//                        'icon' => '<i class="fa fa-language"></i>',
+//                        'active' => (Yii::$app->controller->module->id == 'translation'),
+//                    ],
                     [
                         'label' => Yii::t('backend', 'RBAC Rules'),
                         'url' => '#',
@@ -281,12 +281,12 @@ $bundle = BackendAsset::register($this);
                             ],
                         ],
                     ],
-                    [
-                        'label' => Yii::t('backend', 'Key-Value Storage'),
-                        'url' => ['/system/key-storage/index'],
-                        'icon' => '<i class="fa fa-arrows-h"></i>',
-                        'active' => (Yii::$app->controller->id == 'key-storage'),
-                    ],
+//                    [
+//                        'label' => Yii::t('backend', 'Key-Value Storage'),
+//                        'url' => ['/system/key-storage/index'],
+//                        'icon' => '<i class="fa fa-arrows-h"></i>',
+//                        'active' => (Yii::$app->controller->id == 'key-storage'),
+//                    ],
                     [
                         'label' => Yii::t('backend', 'Cache'),
                         'url' => ['/system/cache/index'],
