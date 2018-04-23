@@ -66,65 +66,7 @@ $this->title = Yii::t('frontend', 'Contact');
             </div>
         </div>
     </div>
-    <div id="sdw-wrap" style="visibility: visible;margin-top:0;">
-        <div class="sdw-container help-container1 active" style="font-size: 21.25px;">
-            <div class="sdw-pc">
-                <div class="sdw1_text pa">
-                    <div class="sdw-animate box"
-                         data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0) &quot;,&quot;opacity&quot;:&quot;0&quot;}"
-                         data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0) &quot;,&quot;opacity&quot;:&quot;1&quot;}"
-                         data-speed="1500" data-delay="0s" data-occur="1"
-                         style="transform: translate3d(0px, 0px, 0px); transition-delay: 0s; transition-duration: 1500ms; opacity: 1;">
-                        <div class="helpmod2"><img src="/images/helpkefuicon_01.png" alt=""></div>
-                    </div>
-
-
-                </div>
-                <div class="pa sdw-animate sdw1_text2 box"
-                     data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0) &quot;,&quot;opacity&quot;:&quot;0&quot;}"
-                     data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0) &quot;,&quot;opacity&quot;:&quot;1&quot;}"
-                     data-speed="1500" data-delay="0.3s" data-occur="1" alt=""
-                     style="transform: translate3d(0px, 0px, 0px); transition-delay: 0.3s; transition-duration: 1500ms; opacity: 1;">
-                    <div class="helpsectiontit1" style="font-size: 32.725px; line-height: 34.2833px;">客服热线</div>
-                    <div class="helpsectiontit2" style="font-size: 21.8167px; line-height: 29.6083px;">如有其它问题需要帮助<br>请拨打电话：400-815-6660
-                    </div>
-                    <div class="helpsectiontit3" style="font-size: 17.1417px; line-height: 21.8167px;">AM 9:00--12:00 PM
-                        13:00--18:00 <br>
-                        星期一 —— 星期日
-                    </div>
-                </div>
-                <div style="height:538px;background:url(/images/helpsection_01.jpg) center top no-repeat"></div>
-            </div>
-            <div class="sdw-mobile">
-                <div class="sdw1_text pa">
-                    <div class="sdw-animate box"
-                         data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0) &quot;,&quot;opacity&quot;:&quot;0&quot;}"
-                         data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0) &quot;,&quot;opacity&quot;:&quot;1&quot;}"
-                         data-speed="1500" data-delay="0s" data-occur="1"
-                         style="transform: translate3d(0px, 0px, 0px); transition-delay: 0s; transition-duration: 1500ms; opacity: 1;">
-                        <div class="helpmod2"><img src="/images/helpkefuicon_01.png" alt=""></div>
-                    </div>
-
-
-                </div>
-                <div class="pa sdw-animate sdw1_text2 box"
-                     data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0) &quot;,&quot;opacity&quot;:&quot;0&quot;}"
-                     data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0) &quot;,&quot;opacity&quot;:&quot;1&quot;}"
-                     data-speed="1500" data-delay="0.3s" data-occur="1" alt=""
-                     style="transform: translate3d(0px, 0px, 0px); transition-delay: 0.3s; transition-duration: 1500ms; opacity: 1;">
-                    <div class="helpsectiontit1" style="font-size: 32.725px; line-height: 34.2833px;">客服热线</div>
-                    <div class="helpsectiontit2" style="font-size: 21.8167px; line-height: 29.6083px;">
-                        如有其它问题需要帮助<br>请拨打电话：<a href="tel:400-815-6660">400-815-6660</a></div>
-                    <div class="helpsectiontit3" style="font-size: 17.1417px; line-height: 21.8167px;">AM 9:00--12:00 PM
-                        13:00--18:00 <br>星期一 —— 星期日
-                    </div>
-                </div>
-                <img src="/images/helpsection_01min.jpg" alt="">
-            </div>
-
-        </div>
-
-    </div>
+    <?= \common\widgets\DbText::widget(['key' => 'faq-hotline']) ?>
     <script type="text/javascript">
         <?php $this->beginBlock('CHECK_JS')?>
         var msg = '<?= $msg?>';
