@@ -17,7 +17,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                                     <ul>
                                         <li id="home"><a href="/#home">首页</a></li>
                                         <li id="product"><a href="/page/product-detail#product">产品介绍</a></li>
-                                        <li id="news"><a href="/article#news">资讯</a></li>
+<!--                                        <li id="news"><a href="/article#news">资讯</a></li>-->
                                         <li id="active"><a href="/active#active">活动</a></li>
                                         <li id="cooperation"><a href="/page/cooperation#cooperation">合作</a></li>
                                         <li id="faq"><a href="/site/contact#faq">咨询与帮助</a></li>
@@ -61,12 +61,12 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                                aria-controls="primary-nav-enterprise-mob">产品介绍 </a>
 
                         </li>
-                        <li>
-                            <a href="/article#news" class="navbar-toggle primary-nav-insights-mob"
-                               data-target="#primary-nav-insights-mob" aria-expanded="false"
-                               aria-controls="primary-nav-insights-mob">资讯</a>
-
-                        </li>
+<!--                        <li>-->
+<!--                            <a href="/article#news" class="navbar-toggle primary-nav-insights-mob"-->
+<!--                               data-target="#primary-nav-insights-mob" aria-expanded="false"-->
+<!--                               aria-controls="primary-nav-insights-mob">资讯</a>-->
+<!---->
+<!--                        </li>-->
                         <li>
                             <a href="/active#active" class="navbar-toggle partner-mob" data-target="#partner-mob"
                                aria-expanded="false" aria-controls="partner-mob">活动 </a>
@@ -108,8 +108,8 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                                 <div class="copyrightmod2tit2">|</div>
                                 <div class="copyrightmod2tit1"><a href="/page/about-youpin">恒信东方儿童优品</a></div>
                                 <div class="copyrightmod2tit2">|</div>
-                                <div class="copyrightmod2tit1"><a href="/page/about-vr">超星时空首映礼</a></div>
-                                <div class="copyrightmod2tit2">|</div>
+<!--                                <div class="copyrightmod2tit1"><a href="/page/about-vr">超星时空首映礼</a></div>-->
+<!--                                <div class="copyrightmod2tit2">|</div>-->
                                 <div class="copyrightmod2tit1"><a href="/join-us">加入我们</a></div>
                                 <div class="copyrightmod2tit2">|</div>
                                 <div class="copyrightmod2tit1"><a href="/page/about-law">法律顾问</a></div>
@@ -144,7 +144,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                     </div>
                     <div class="copyrightmod2-2">
                         <div class="copyrightmod2tit">
-                            <div class="copyrightmod2tit1"><a href="/page/about-vr">超星时空首映礼</a></div>
+<!--                            <div class="copyrightmod2tit1"><a href="/page/about-vr">超星时空首映礼</a></div>-->
                             <div class="copyrightmod2tit1"><a href="/join-us">加入我们</a></div>
                             <div class="copyrightmod2tit1"><a href="/page/about-law">法律顾问</a></div>
                             <div class="copyrightmod2tit1"><a href="/page/about-contact">联系我们</a></div>

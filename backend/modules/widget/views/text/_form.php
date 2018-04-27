@@ -20,9 +20,18 @@ use yii\helpers\Html;
 <?php echo $form->field($model, 'title')->textInput(['maxlength' => 512]) ?>
 
 <?php echo $form->field($model, 'body')->widget(
-    trntv\aceeditor\AceEditor::class,
+    \yii\imperavi\Widget::class,
     [
-        'mode' => 'html',
+        'plugins' => ['fullscreen', 'fontcolor', 'video'],
+        'options' => [
+            'lang' => 'zh_cn',
+            'replaceDivs' => false,
+            'deniedTags' => false,
+            'minHeight' => 400,
+            'maxHeight' => 400,
+            'buttonSource' => true,
+            'imageUpload' => Yii::$app->urlManager->createUrl(['/file/storage/upload-imperavi']),
+        ],
     ]
 ) ?>
 
