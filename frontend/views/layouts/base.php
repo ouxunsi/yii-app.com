@@ -14,14 +14,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                             <div class="headtop">
                                 <div class="logo"><a href="/"><img src="/images/logo.jpg"></a></div>
                                 <div class="topnav">
-                                    <ul>
-                                        <li id="home"><a href="/#home">首页</a></li>
-                                        <li id="product"><a href="/page/product-detail#product">产品介绍</a></li>
-<!--                                        <li id="news"><a href="/article#news">资讯</a></li>-->
-                                        <li id="active"><a href="/active#active">活动</a></li>
-                                        <li id="cooperation"><a href="/page/cooperation#cooperation">合作</a></li>
-                                        <li id="faq"><a href="/site/contact#faq">咨询与帮助</a></li>
-                                    </ul>
+                                    <?php echo \common\widgets\DbMenu::widget(['key' => 'frontend-index']) ?>
                                 </div>
                             </div>
                         </div>
@@ -61,12 +54,12 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                                aria-controls="primary-nav-enterprise-mob">产品介绍 </a>
 
                         </li>
-<!--                        <li>-->
-<!--                            <a href="/article#news" class="navbar-toggle primary-nav-insights-mob"-->
-<!--                               data-target="#primary-nav-insights-mob" aria-expanded="false"-->
-<!--                               aria-controls="primary-nav-insights-mob">资讯</a>-->
-<!---->
-<!--                        </li>-->
+                        <!--                        <li>-->
+                        <!--                            <a href="/article#news" class="navbar-toggle primary-nav-insights-mob"-->
+                        <!--                               data-target="#primary-nav-insights-mob" aria-expanded="false"-->
+                        <!--                               aria-controls="primary-nav-insights-mob">资讯</a>-->
+                        <!---->
+                        <!--                        </li>-->
                         <li>
                             <a href="/active#active" class="navbar-toggle partner-mob" data-target="#partner-mob"
                                aria-expanded="false" aria-controls="partner-mob">活动 </a>
@@ -93,7 +86,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
             </div>
         </header>
         <div class="margintop"></div>
-        <?= $content?>
+        <?= $content ?>
         <div class="hjh-pc">
             <div class="copyrightmod">
                 <div class="copyrightmod1">
@@ -101,21 +94,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                         <div class="copyrightmod2">
                             <div class="logo1"><a target="_blank" href="http://www.hxgro.com"><img
                                             src="/images/logo1.jpg"/></a></div>
-                            <div class="copyrightmod2tit">
-                                <div class="copyrightmod2tit1"><a href="/page/about-company">公司介绍</a></div>
-                                <div class="copyrightmod2tit2">|</div>
-                                <div class="copyrightmod2tit1"><a href="/page/about-youguan">恒信东方儿童优馆</a></div>
-                                <div class="copyrightmod2tit2">|</div>
-                                <div class="copyrightmod2tit1"><a href="/page/about-youpin">恒信东方儿童优品</a></div>
-                                <div class="copyrightmod2tit2">|</div>
-<!--                                <div class="copyrightmod2tit1"><a href="/page/about-vr">超星时空首映礼</a></div>-->
-<!--                                <div class="copyrightmod2tit2">|</div>-->
-                                <div class="copyrightmod2tit1"><a href="/join-us">加入我们</a></div>
-                                <div class="copyrightmod2tit2">|</div>
-                                <div class="copyrightmod2tit1"><a href="/page/about-law">法律顾问</a></div>
-                                <div class="copyrightmod2tit2">|</div>
-                                <div class="copyrightmod2tit1"><a href="/page/about-contact">联系我们</a></div>
-                            </div>
+                            <?= \common\widgets\DbMenu::widget(['key' => 'frontend-footer', 'options' => ['tag' => 'div', 'class' => 'copyrightmod2tit']]) ?>
                         </div>
                     </div>
 
@@ -144,7 +123,7 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
                     </div>
                     <div class="copyrightmod2-2">
                         <div class="copyrightmod2tit">
-<!--                            <div class="copyrightmod2tit1"><a href="/page/about-vr">超星时空首映礼</a></div>-->
+                            <!--                            <div class="copyrightmod2tit1"><a href="/page/about-vr">超星时空首映礼</a></div>-->
                             <div class="copyrightmod2tit1"><a href="/join-us">加入我们</a></div>
                             <div class="copyrightmod2tit1"><a href="/page/about-law">法律顾问</a></div>
                             <div class="copyrightmod2tit1"><a href="/page/about-contact">联系我们</a></div>
@@ -164,18 +143,18 @@ $this->beginContent('@frontend/views/layouts/_clear.php');
 
             </div>
         </div>
-        <?= $this->blocks['video_box']?>
+        <?= $this->blocks['video_box'] ?>
     </div>
 
     <script>
         <?php $this->beginBlock('SWITCH_NAV')?>
         var url = location.href;
-        var arr=url.split("#");
-        if(arr[1]){
+        var arr = url.split("#");
+        if (arr[1]) {
             $("#hw1_global_nav .topnav li").removeClass('topnavlicur');
-            $("#"+arr[1]).addClass('topnavlicur');
+            $("#" + arr[1]).closest('li').addClass('topnavlicur');
         }
         <?php $this->endBlock()?>
     </script>
-<?php $this->registerJs($this->blocks['SWITCH_NAV'],\yii\web\View::POS_READY)?>
+<?php $this->registerJs($this->blocks['SWITCH_NAV'], \yii\web\View::POS_READY) ?>
 <?php $this->endContent() ?>

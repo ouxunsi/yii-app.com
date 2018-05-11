@@ -14,14 +14,7 @@ $this->registerCss('body {background:#ededed;}');
                         <div class="headtop">
                             <div class="logo"><a href="/"><img src="/images/logo.jpg"></a></div>
                             <div class="topnav">
-                                <ul>
-                                    <li id="home"><a href="/#home">首页</a></li>
-                                    <li id="product"><a href="/page/product-detail#product">产品介绍</a></li>
-<!--                                    <li id="news"><a href="/article#news">资讯</a></li>-->
-                                    <li id="active"><a href="/active#active">活动</a></li>
-                                    <li id="cooperation"><a href="/page/cooperation#cooperation">合作</a></li>
-                                    <li id="faq"><a href="/site/contact#faq">咨询与帮助</a></li>
-                                </ul>
+                                <?php echo \common\widgets\DbMenu::widget(['key' => 'frontend-index']) ?>
                             </div>
                         </div>
                     </div>
@@ -43,17 +36,7 @@ $this->registerCss('body {background:#ededed;}');
                             <div class="aboutmenutit">
                                 <span>菜单</span><span class="upicon"><img src="/images/down.png"/></span>
                             </div>
-                            <ul style="display: none;">
-                                <li><a href="/page/about-company">公司介绍</a></li>
-                                <li><a href="/page/about-youguan">恒信东方儿童优馆</a></li>
-                                <li><a href="/page/about-youpin">恒信东方儿童优品</a></li>
-<!--                                <li><a href="/page/about-vr">超星时空首映礼</a></li>-->
-                                <li><a href="/join-us">加入我们</a></li>
-                                <li><a href="/page/about-law">法律顾问</a></li>
-                                <li><a href="/page/about-contact">联系我们</a></li>
-                            </ul>
-
-
+                            <?= \common\widgets\DbMenu::widget(['key' => 'frontend-about', 'options' => ['style' => "display:none"]]) ?>
                         </div>
                     </div>
                 </div>
@@ -74,12 +57,6 @@ $this->registerCss('body {background:#ededed;}');
                            aria-controls="primary-nav-enterprise-mob">产品介绍 </a>
 
                     </li>
-<!--                    <li>-->
-<!--                        <a href="/article#news" class="navbar-toggle primary-nav-insights-mob"-->
-<!--                           data-target="#primary-nav-insights-mob" aria-expanded="false"-->
-<!--                           aria-controls="primary-nav-insights-mob">资讯</a>-->
-<!---->
-<!--                    </li>-->
                     <li>
                         <a href="/active#active" class="navbar-toggle partner-mob" data-target="#partner-mob"
                            aria-expanded="false" aria-controls="partner-mob">活动 </a>
@@ -109,15 +86,7 @@ $this->registerCss('body {background:#ededed;}');
     <div class="pagemain1">
         <div class="aboutmod1">
             <div class="aboutnav">
-                <ul id="about-menu">
-                    <li id="about-company"><a href="about-company">公司介绍</a></li>
-                    <li id="about-youguan"><a href="about-youguan">恒信东方儿童优馆</a></li>
-                    <li id="about-youpin"><a href="about-youpin">恒信东方儿童优品</a></li>
-<!--                    <li id="about-vr"><a href="about-vr">超星时空首映礼</a></li>-->
-                    <li><a href="/join-us">加入我们</a></li>
-                    <li id="about-law"><a href="about-law">法律顾问</a></li>
-                    <li id="about-contact"><a style="border-bottom:none;" href="about-contact">联系我们</a></li>
-                </ul>
+                <?= \common\widgets\DbMenu::widget(['key' => 'frontend-about-left', 'options' => ['id' => "about-menu"]]) ?>
             </div>
 
             <div class="aboutright">
@@ -134,21 +103,7 @@ $this->registerCss('body {background:#ededed;}');
                     <div class="copyrightmod2">
                         <div class="logo1"><a target="_blank" href="http://www.hxgro.com"><img src="/images/logo1.jpg"/></a>
                         </div>
-                        <div class="copyrightmod2tit">
-                            <div class="copyrightmod2tit1"><a href="about-company">公司介绍</a></div>
-                            <div class="copyrightmod2tit2">|</div>
-                            <div class="copyrightmod2tit1"><a href="about-youguan">恒信东方儿童优馆</a></div>
-                            <div class="copyrightmod2tit2">|</div>
-                            <div class="copyrightmod2tit1"><a href="about-youpin">恒信东方儿童优品</a></div>
-                            <div class="copyrightmod2tit2">|</div>
-<!--                            <div class="copyrightmod2tit1"><a href="about-vr">超星时空首映礼</a></div>-->
-<!--                            <div class="copyrightmod2tit2">|</div>-->
-                            <div class="copyrightmod2tit1"><a href="/join-us">加入我们</a></div>
-                            <div class="copyrightmod2tit2">|</div>
-                            <div class="copyrightmod2tit1"><a href="about-law">法律顾问</a></div>
-                            <div class="copyrightmod2tit2">|</div>
-                            <div class="copyrightmod2tit1"><a href="about-contact">联系我们</a></div>
-                        </div>
+                        <?= \common\widgets\DbMenu::widget(['key' => 'frontend-footer', 'options' => ['tag' => 'div', 'class' => 'copyrightmod2tit']]) ?>
                     </div>
                 </div>
 
@@ -177,7 +132,7 @@ $this->registerCss('body {background:#ededed;}');
                 </div>
                 <div class="copyrightmod2-2">
                     <div class="copyrightmod2tit">
-<!--                        <div class="copyrightmod2tit1"><a href="about-vr">超星时空首映礼</a></div>-->
+                        <!--                        <div class="copyrightmod2tit1"><a href="about-vr">超星时空首映礼</a></div>-->
                         <div class="copyrightmod2tit1"><a href="/join-us">加入我们</a></div>
                         <div class="copyrightmod2tit1"><a href="about-law">法律顾问</a></div>
                         <div class="copyrightmod2tit1"><a href="about-contact">联系我们</a></div>
@@ -198,12 +153,12 @@ $this->registerCss('body {background:#ededed;}');
         </div>
     </div>
 </div>
-    <script>
-        <?php $this->beginBlock('SWITCH_LIST')?>
-        var slug = '<?=$model->slug?>';
-        if (slug) {
-            $("#" + slug).addClass("aboutnavlicur");
-        }
-        <?php $this->endBlock();?>
-    </script>
-    <?php $this->registerJs($this->blocks['SWITCH_LIST'], \yii\web\View::POS_READY) ?>
+<script>
+    <?php $this->beginBlock('SWITCH_LIST')?>
+    var slug = '<?=$model->slug?>';
+    if (slug) {
+        $("#" + slug).addClass("aboutnavlicur");
+    }
+    <?php $this->endBlock();?>
+</script>
+<?php $this->registerJs($this->blocks['SWITCH_LIST'], \yii\web\View::POS_READY) ?>
