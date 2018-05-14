@@ -45,41 +45,8 @@ $this->registerCss('body {background:#ededed;}');
 
         <div id="hw1_mob_nav_container">
             <div class="mob_nav_open  visible-xs visible-sm">
-                <ul>
-                    <li>
-                        <a href="/" class="navbar-toggle primary-nav-consumer-mob" aria-expanded="false"
-                           aria-controls="primary-nav-consumer-mob">首页</a>
-
-                    </li>
-                    <li>
-                        <a href="/page/product-detail" class="navbar-toggle primary-nav-enterprise-mob"
-                           data-target="#primary-nav-enterprise-mob" aria-expanded="false"
-                           aria-controls="primary-nav-enterprise-mob">产品介绍 </a>
-
-                    </li>
-                    <li>
-                        <a href="/active#active" class="navbar-toggle partner-mob" data-target="#partner-mob"
-                           aria-expanded="false" aria-controls="partner-mob">活动 </a>
-                    </li>
-
-                    <li>
-                        <a href="/page/cooperation#cooperation" class="navbar-toggle primary-nav-insights-mob"
-                           data-target="#primary-nav-insights-mob" aria-expanded="false"
-                           aria-controls="primary-nav-insights-mob">合作 </a>
-
-                    </li>
-                    <li>
-                        <a href="/site/contact#faq" class="navbar-toggle primary-nav-insights-mob"
-                           data-target="#primary-nav-insights-mob" aria-expanded="false"
-                           aria-controls="primary-nav-insights-mob">咨询与帮助 </a>
-
-                    </li>
-                </ul>
-
-
+                <?= \common\widgets\DbMenu::widget(['key' => 'mob-frontend-index']) ?>
             </div>
-
-
         </div>
     </header>
     <div class="margintop"></div>
@@ -112,7 +79,6 @@ $this->registerCss('body {background:#ededed;}');
                 <div class="pagemain">
                     <div class="copyrightmod3tit">
                         ©2018 恒信东方文化股份有限公司 京ICP备09008062号 京公海网安备110108001245号
-
                     </div>
                 </div>
             </div>
@@ -124,19 +90,10 @@ $this->registerCss('body {background:#ededed;}');
                 <div class="copyrightmod2-0"><a target="_blank" href="http://www.hxgro.com"><img
                                 src="/images/logo1min.png"/></a></div>
                 <div class="copyrightmod2-1">
-                    <div class="copyrightmod2tit">
-                        <div class="copyrightmod2tit1"><a href="about-company">公司介绍</a></div>
-                        <div class="copyrightmod2tit1"><a href="about-youguan">恒信东方儿童优馆</a></div>
-                        <div class="copyrightmod2tit1"><a href="about-youpin">恒信东方儿童优品</a></div>
-                    </div>
+                    <?= \common\widgets\DbMenu::widget(['key' => 'mob-frontend-footer-1', 'options' => ['tag' => 'div', 'class' => 'copyrightmod2tit']]) ?>
                 </div>
                 <div class="copyrightmod2-2">
-                    <div class="copyrightmod2tit">
-                        <!--                        <div class="copyrightmod2tit1"><a href="about-vr">超星时空首映礼</a></div>-->
-                        <div class="copyrightmod2tit1"><a href="/join-us">加入我们</a></div>
-                        <div class="copyrightmod2tit1"><a href="about-law">法律顾问</a></div>
-                        <div class="copyrightmod2tit1"><a href="about-contact">联系我们</a></div>
-                    </div>
+                    <?= \common\widgets\DbMenu::widget(['key' => 'mob-frontend-footer-2', 'options' => ['tag' => 'div', 'class' => 'copyrightmod2tit']]) ?>
                 </div>
             </div>
 
