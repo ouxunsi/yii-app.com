@@ -139,6 +139,10 @@ $this->registerCss('body {background:#ededed;}');
     </div>
     <script>
         <?php $this->beginBlock('LOAD')?>
+        var slug = '<?=$slug?>';
+        if (slug) {
+            $("#" + slug).addClass("aboutnavlicur");
+        }
         var category_id = '<?=$category_id?>';
         var lanren = {
             _default: 3, //默认显示图片个数

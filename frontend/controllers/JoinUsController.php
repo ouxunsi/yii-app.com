@@ -19,9 +19,9 @@ class JoinUsController extends Controller
     public function actionIndex()
     {
         $category_id = Yii::$app->request->get('category_id');
-        $categories = ArticleCategory::find()->where(['parent_id'=>2,'status'=>1])->all();
+        $categories = ArticleCategory::find()->where(['parent_id' => 2, 'status' => 1])->all();
         $this->layout = '_clear';
-        return $this->render('index',['categories'=>$categories,'category_id'=>$category_id]);
+        return $this->render('index', ['categories' => $categories, 'category_id' => $category_id, 'slug' => 'join-us']);
     }
 
     /**
