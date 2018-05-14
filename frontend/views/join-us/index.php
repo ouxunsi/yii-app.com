@@ -47,7 +47,7 @@ $this->registerCss('body {background:#ededed;}');
 
             <div id="hw1_mob_nav_container">
                 <div class="mob_nav_open  visible-xs visible-sm">
-                    <?= \common\widgets\DbMenu::widget(['key' => 'mob-frontend-index']);exit; ?>
+                    <?= \common\widgets\DbMenu::widget(['key' => 'mob-frontend-index']) ?>
                 </div>
             </div>
         </header>
