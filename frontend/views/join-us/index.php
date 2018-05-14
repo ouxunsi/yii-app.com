@@ -38,7 +38,7 @@ $this->registerCss('body {background:#ededed;}');
                                 <div class="aboutmenutit">
                                     <span>菜单</span><span class="upicon"><img src="/images/down.png"/></span>
                                 </div>
-                                <?= \common\widgets\DbMenu::widget(['key' => 'frontend-about-left', 'options' => ['style' => "display:none"]]) ?>
+                                <?= \common\widgets\DbMenu::widget(['key' => 'frontend-about', 'options' => ['style' => "display:none"]]) ?>
                             </div>
                         </div>
                     </div>
@@ -139,10 +139,8 @@ $this->registerCss('body {background:#ededed;}');
     </div>
     <script>
         <?php $this->beginBlock('LOAD')?>
-        var slug = '<?=$slug?>';
-        if (slug) {
-            $("#" + slug).addClass("aboutnavlicur");
-        }
+        $("#join-us").addClass("aboutnavlicur");
+
         var category_id = '<?=$category_id?>';
         var lanren = {
             _default: 3, //默认显示图片个数
