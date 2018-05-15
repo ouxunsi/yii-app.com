@@ -55,6 +55,9 @@ class DbMenu extends Menu
         $n = count($items);
         $lines = [];
         foreach ($items as $i => $item) {
+            if($item['display']=='none'){
+                continue;
+            }
             $options = array_merge($this->itemOptions, ArrayHelper::getValue($item, 'options', []));
             $tag = ArrayHelper::remove($options, 'tag', 'li');
             $class = [];
