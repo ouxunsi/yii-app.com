@@ -29,3 +29,10 @@ $this->title = $model->title;
         </div>
     </div>
 </div>
+<script>
+    <?php $this->beginBlock('ARTICLE_NAV')?>
+    $("#hw1_global_nav .topnav li").removeClass('topnavlicur');
+    $("#news").closest('li').addClass('topnavlicur');
+    <?php $this->endBlock()?>
+</script>
+<?php $this->registerJs($this->blocks['ARTICLE_NAV'], \yii\web\View::POS_READY) ?>

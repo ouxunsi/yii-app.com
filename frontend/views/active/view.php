@@ -29,3 +29,10 @@ $this->title = $model->title;
         </div>
     </div>
 </div>
+<script>
+    <?php $this->beginBlock('ACTIVE_NAV')?>
+    $("#hw1_global_nav .topnav li").removeClass('topnavlicur');
+    $("#active").closest('li').addClass('topnavlicur');
+    <?php $this->endBlock()?>
+</script>
+<?php $this->registerJs($this->blocks['ACTIVE_NAV'], \yii\web\View::POS_READY) ?>
