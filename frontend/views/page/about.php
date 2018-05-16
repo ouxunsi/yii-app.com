@@ -4,6 +4,7 @@
 /* @var $model \common\models\Page */
 \frontend\assets\HejiahuanFrontendAsset::register($this);
 $this->registerCss('body {background:#ededed;}');
+$this->title = $model->title;
 ?>
 <div class="bodypage">
     <header style="position:fixed">

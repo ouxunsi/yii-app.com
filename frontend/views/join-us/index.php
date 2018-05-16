@@ -4,7 +4,7 @@
 /* @var $searchModel frontend\models\search\ArticleSearch */
 /* @var $category \common\models\ArticleCategory */
 \frontend\assets\HejiahuanFrontendAsset::register($this);
-$this->title = Yii::t('frontend', 'Join us');
+$this->title = '加入我们';
 $this->registerCss('body {background:#ededed;}');
 ?>
     <div class="bodypage">

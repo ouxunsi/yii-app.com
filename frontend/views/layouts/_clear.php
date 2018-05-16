@@ -10,7 +10,7 @@ use yii\helpers\Html;
 <head>
     <meta charset="<?php echo Yii::$app->charset ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo Html::encode($this->title) ?></title>
+    <title><?php echo Html::encode($this->title.'-'.Yii::t('frontend', Yii::$app->name).'-恒信东方') ?></title>
     <?php $this->head() ?>
     <?php echo Html::csrfMetaTags() ?>
 </head>

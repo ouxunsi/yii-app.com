@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = Yii::t('frontend', Yii::$app->name);
+$this->title = '首页';
 ?>
 
 <div class="pagemain">
